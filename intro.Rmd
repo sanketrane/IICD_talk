@@ -1,0 +1,144 @@
+
+## .center[Diversity and Numbers]
+<hr>
+
+
+```{r echo=FALSE, fig.retina=3, out.width='1000', out.height='450'}
+
+knitr::include_graphics("figures/intro_slide.png")
+```
+
+
+
+???
+- RTES are only source of novel TCRs within the T cell compartment and therefore understanding their dynamics is crucial for understanding how TCR repertoires evolve across our lifespans.
+
+- no way to identify RTEs phenotypically -- {ASM allows us to identify RTEs and therefore ca predict their dynamics.}
+
+- RTEs distinct dynamics than mN?
+
+---
+## .center[Naive T cell dynamics in mice]
+<hr>
+
+```{r echo=FALSE, fig.retina=3}
+
+knitr::include_graphics("figures/intro_counts1.png")
+```
+--
+count: false
+
+</br>
+
+Naive CD4 and CD8 T cell numbers increase rapidly early in life, peak around 8 weeks of age and decline slowly thereafter $(t_{1/2} \sim 160d)$.
+
+---
+count: false
+
+## .center[Naive T cell dynamics in mice]
+<hr>
+
+
+```{r echo=FALSE, fig.retina=3}
+
+knitr::include_graphics("figures/intro_counts2.png")
+```
+
+
+
+--
+count: false
+
+</br>
+In humans, the thymic contribution to naive T cell maintenance diminishes significantly post thymic-involution (puberty) as compared to in mice.
+.right[den Braber _et. al._ Immunity 2012]
+
+???
+- The rules of T cell homeostasis differe in adults and elderly.
+
+- Thymic counts and peripheral counts.
+
+- thymic cellularity increases dramatically over short period of time.
+- in periphery naive T cell dyamics are closely mapped onto thymic SP counts. thymic influx haevily dominates naive T cell homeostasis early on in life.
+
+---
+
+##  .center[How are T cell pools established early on in life?]
+<hr>
+
+</br>
+
+### Thymic cellularity increases dramatically within first 7-8 weeks of age.
+- Rapid influx of new naive T cells into the growing T cell compartments.
+
+--
+
+</br>
+
+### Lymphopenia induced proliferation (LIP) -  naive T cells divide rapidly in empty niches.
+
+- In neonates T cell niches are still delveloping. **Is there space for expansion?**
+
+- Skewing of TCR repertoire? T cells coming out early on in life are over-represented. Is it uniform? Or inherent variation?
+
+
+???
+- Force of recruitment into memory early on in life?
+
+## .center[**Neonatal naive T cell pools are dynamically maintained**]
+
+
+---
+
+##  .center[What happens after thymic involution?]
+<hr>
+
+</br>
+
+### Do naive T cell dynamics differ between neonates and adults?
+- Compensatory increase in cell division? or decrease in loss? or both?
+
+???
+naive T cell numbers are maintained stably till very late in life.
+
+--
+
+### Cell-age dependence &mdash;
+
+- Naive T cells' persistance (division - loss) in mice and humans increases gradually with their age (time since thymic exit).
+.right[Rane _et. al._ Plos Bio 2018, Mold _et. al._ Plos Bio 2019]
+
+- Consequences on TCR repertoire diversity?
+
+- Can it explain naive T cell development in dynamic neonatal niches?
+
+---
+
+class: inverse
+background-image: url("figures/inverse_bg.png")
+
+##  Immunological relevance
+<hr>
+
+</br>
+
+### Mechanisms that regulate T cell pool sizes across our lifespans.
+- **A model that explains it all** &xrarr; Dynamism in neonates and stability in adults. 
+
+--
+
+### TCR Repertoire diversity.
+- How clonal populations establish and evolve? &xrarr; Simulating their dynamics.
+
+--
+
+### Recovery of T cell pools upon depletion.
+
+- How naive T cell pools are restored and restablished upon T cell depletion (e.g. in HSC Transplants and in HIV patients)?
+
+???
+- Is there LIP? Does the extent of reconstitution depend on the age of individual?
+
+
+
+
