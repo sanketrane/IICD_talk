@@ -5,8 +5,9 @@
     <meta charset="utf-8" />
     <meta name="author" content="Sanket Rane" />
     <meta name="date" content="2020-12-08" />
-    <script src="libs/header-attrs/header-attrs.js"></script>
-    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <script src="libs/kePrint/kePrint.js"></script>
+    <link href="libs/lightable/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="My-xaringan-themer.css" type="text/css" />
     <link rel="stylesheet" href="xaringan-custom.css" type="text/css" />
   </head>
   <body>
@@ -166,7 +167,6 @@ background-image: url("figures/inverse_bg.png")
 
 
 
-
 ---
 
 
@@ -260,13 +260,7 @@ $$
 
 
 ???
-`\(\alpha\)` - rate of daily influx into the naive pool
 
-`\(\rho\)` - rate of cell division
-
-`\(\delta\)` - rate of loss by death and differentiation
-
-`\(beta\)` - rate of loss of ki67 expression
 
 ---
 ### Model vaildation and comparison
@@ -295,6 +289,7 @@ $$
 - This probability density is then used to update our prior beliefs in model parameters using the bayesian approach.
 
 
+We judge the models under consideration based on **parsimony** and their ability to predict **New observations** which is also called as out of sample prediction error.
 
 --
 
@@ -305,8 +300,6 @@ Occam's razor:
 Models are selected based on **parsimony** and their ability to predict **New observations** &amp;mdash; (out-of-sample prediction error).
 ]
 
-??? 
-We judge the models under consideration based on **parsimony** and their ability to predict **New observations** which is also called as out of sample prediction error.
 
 ---
 
@@ -338,14 +331,43 @@ $$
 
 ???
 We then used the estimated LOO-IC values to assess the relative support for models using the analog of the Akaike weight which gives us the probability that a given model will explain new data better than other models considered in this analysis.
+\
+
 
 ---
 
-class: center, middle
+
+
+class: center
 
 ### .left[Fits for CD4 data]
 
-&lt;img src="figures/cd4_tab1.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Model &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; ΔLooIC &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Akaike weight % &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Neutral &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5.2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6.71 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; LIP &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6.8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.01 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; Density-dependent loss &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 0.0 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 90.28 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 --
 
@@ -354,11 +376,36 @@ class: center, middle
 
 ---
 
-class: center, middle
+class: center
 
 ### .left[Fits for CD8 data]
 
-&lt;img src="figures/cd8_tab1.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Model &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; ΔLooIC &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Akaike weight % &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Neutral &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 13.14 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.13 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; LIP &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 93.80 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Density-dependent loss &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5.48 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6.07 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 --
 
@@ -382,24 +429,100 @@ class: center, middle
 
 
 ---
-class: center, middle
+class: center
 
-&lt;img src="figures/cd4_tab2.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;/br&gt;
+
+
+&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Model &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; ΔLooIC &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Akaike weight % &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Neutral &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5.20 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5.74 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; LIP &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6.80 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.58 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; Density-dependent loss &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 77.23 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; RTE &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6.87 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.49 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; RTE maturation linked division &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.73 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 11.96 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 --
 
+
 &lt;img src="figures/cd4_compare2.png" width="100%" style="display: block; margin: auto;" /&gt;
 
-
 ---
+class: center
 
-class: center, middle
+&lt;/br&gt;
 
-&lt;img src="figures/cd8_tab2.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Model &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; ΔLooIC &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Akaike weight % &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Neutral &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 13.14 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.13 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; LIP &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 93.49 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Density-dependent loss &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5.48 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6.05 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; RTE &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 11.76 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.26 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; RTE maturation linked division &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 14.43 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.07 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 --
 
 &lt;img src="figures/cd8_compare2.png" width="100%" style="display: block; margin: auto;" /&gt;
+
 
 
 ---
@@ -425,10 +548,54 @@ $$
 ]
 
 ---
+class: center
 
-class: center, middle
-
-&lt;img src="figures/cd4_tab3.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Model &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; ΔLooIC &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Akaike weight % &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Neutral &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5.20 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4.42 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; LIP &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6.80 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.99 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; Density-dependent loss &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 59.56 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; RTE &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6.87 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.92 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; RTE maturation linked division &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.73 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 9.23 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; ASM δ-varying &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5.98 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.99 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; ASM ρ-varying &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 2.19 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 19.89 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 --
 
@@ -436,9 +603,54 @@ class: center, middle
 
 
 ---
-class: center, middle
+class: center
 
-&lt;img src="figures/cd8_tab3.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Model &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; ΔLooIC &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Akaike weight % &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Neutral &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 13.14 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.10 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; LIP &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 70.67 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Density-dependent loss &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5.48 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4.57 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; RTE &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 11.76 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.20 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; RTE maturation linked division &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 14.43 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.05 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; ASM δ-varying &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 2.14 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 24.25 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; ASM ρ-varying &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 12.22 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.16 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 --
 
@@ -461,10 +673,12 @@ Agent based models to predict Rag GFP data.
 Also, simulating TCR repertoire dynamics.
 
 
+
 ---
 
 
 
+count: false
 
 class: center, middle
 
@@ -475,17 +689,13 @@ class: center, middle
 class: inverse
 background-image: url("figures/inverse_bg.png")
 
-
-### Malleability of the models
 &lt;hr&gt;
-
 
 &lt;img src="figures/timestamp_paper.png" width="750" style="display: block; margin: auto;" /&gt;
 
 &lt;/br&gt;
 
 ???
-A good test of a model is its versatility in explaining multiple datasets generated in diverse experimental settings.
 
 &lt;p style="color:navy;"&gt;A good test of a model is its versatility in explaining multiple datasets generated in diverse experimental settings.&lt;/p&gt;
 
@@ -493,12 +703,7 @@ A good test of a model is its versatility in explaining multiple datasets genera
 
 &lt;img src="figures/ts_strategy1.png" width="750" style="display: block; margin: auto;" /&gt;
 
-???
-
-class: center, middle
-
-&lt;img src="figures/timestamp_strategy2.png" width="600" style="display: block; margin: auto;" /&gt;
-
+&lt;hr&gt;
 ---
 
 class: center
@@ -513,40 +718,15 @@ class: center, middle
 
 # Thanks!
 
-.left[
 The models are coded in `Stan` programming language, are compiled using `CMDSTAN` interface and analysed in R using `Rstan` package.
-]
 
 &lt;/br&gt;
-
 &lt;/br&gt;
 
-.left[
+
 Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
-]
+
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

@@ -80,6 +80,11 @@
   border: 2px #203864;
   border-radius: 5px;
 }
+
+
+table.dataTable.display tbody tr.even {
+  background-color: #ffffff;
+}
 /* Remove slide count 
 .title-slide .remark-slide-number {
   text-shadow: none;

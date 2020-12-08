@@ -103,13 +103,7 @@ $$
 
 
 ???
-$\alpha$ - rate of daily influx into the naive pool
 
-$\rho$ - rate of cell division
-
-$\delta$ - rate of loss by death and differentiation
-
-$beta$ - rate of loss of ki67 expression
 
 ---
 ### Model vaildation and comparison
@@ -138,6 +132,7 @@ $$
 - This probability density is then used to update our prior beliefs in model parameters using the bayesian approach.
 
 
+We judge the models under consideration based on **parsimony** and their ability to predict **New observations** which is also called as out of sample prediction error.
 
 --
 
@@ -148,8 +143,6 @@ Occam's razor:
 Models are selected based on **parsimony** and their ability to predict **New observations** &mdash; (out-of-sample prediction error).
 ]
 
-??? 
-We judge the models under consideration based on **parsimony** and their ability to predict **New observations** which is also called as out of sample prediction error.
 
 ---
 
@@ -184,171 +177,5 @@ $$
 
 ???
 We then used the estimated LOO-IC values to assess the relative support for models using the analog of the Akaike weight which gives us the probability that a given model will explain new data better than other models considered in this analysis.
-
----
-
-class: center, middle
-
-### .left[Fits for CD4 data]
-
-```{r echo=FALSE, fig.retina=3}
-
-knitr::include_graphics("figures/cd4_tab1.png")
-```
-
---
-
-```{r echo=FALSE, fig.retina=3}
-
-knitr::include_graphics("figures/cd4_compare1.png")
-```
-
-
----
-
-class: center, middle
-
-### .left[Fits for CD8 data]
-
-```{r echo=FALSE, fig.retina=3}
-
-knitr::include_graphics("figures/cd8_tab1.png")
-```
-
---
-
-```{r echo=FALSE, fig.retina=3}
-
-knitr::include_graphics("figures/cd8_compare1.png")
-```
-
-
----
-
-### .left[Two-compartment models]
-<hr>
-
-
-```{r echo=FALSE, fig.retina=3, out.width='550'}
-
-knitr::include_graphics("figures/rte1_diag.png")
-```
-
-
-</br>
-
---
-
-```{r echo=FALSE, fig.retina=3, out.width='550'}
-
-knitr::include_graphics("figures/rte2_diag.png")
-```
-
-
----
-class: center, middle
-
-```{r echo=FALSE, fig.retina=3}
-
-knitr::include_graphics("figures/cd4_tab2.png")
-```
-
---
-
-```{r echo=FALSE, fig.retina=3}
-
-knitr::include_graphics("figures/cd4_compare2.png")
-```
-
-
----
-
-class: center, middle
-
-```{r echo=FALSE, fig.retina=3}
-
-knitr::include_graphics("figures/cd8_tab2.png")
-```
-
---
-
-```{r echo=FALSE, fig.retina=3}
-
-knitr::include_graphics("figures/cd8_compare2.png")
-```
-
-
----
-
-### Adaptation: age-structured models
-<hr>
-
-
-</br>
-
-```{r echo=FALSE, fig.retina=3, out.width='600'}
-
-knitr::include_graphics("figures/asm_diag.png")
-```
-
-</br>
-
-Naive T cells of age 'a' and Ki67 expression 'k' are tracked over time by analytically solving the 3 dimensional PDE,
-
-.shadedbox[
-$$
-\begin{aligned}
-\frac{\partial N}{\partial t} + \frac{\partial N}{\partial a} - \beta \, k \, \frac{\partial N}{\partial k}= -(\rho(a) + \delta(a)) \, N(t, a, k)
-\end{aligned}
-$$
-]
-
----
-
-class: center, middle
-
-```{r echo=FALSE, fig.retina=3}
-
-knitr::include_graphics("figures/cd4_tab3.png")
-```
-
---
-
-```{r echo=FALSE, fig.retina=3}
-
-knitr::include_graphics("figures/cd4_compare3.png")
-```
-
-
----
-class: center, middle
-
-```{r echo=FALSE, fig.retina=3}
-
-knitr::include_graphics("figures/cd8_tab3.png")
-```
-
---
-
-```{r echo=FALSE, fig.retina=3}
-
-knitr::include_graphics("figures/cd8_compare3.png")
-```
-
----
-
-class: center
-## Summary
-
-Cant discriminate between models.
-Equivocal support from ontogeny data.
-Density-dependece explains dynamics early on in life?
-ASM explains dynamics post hymic involution?
-Untangling Net growth into division and loss. 
---
-
-## Whats Next?
-Agent based models to predict Rag GFP data.
-Also, simulating TCR repertoire dynamics.
-
+\
 
