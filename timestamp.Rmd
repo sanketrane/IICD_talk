@@ -1,3 +1,4 @@
+count: false
 
 class: center, middle
 
@@ -8,10 +9,7 @@ class: center, middle
 class: inverse
 background-image: url("figures/inverse_bg.png")
 
-
-### Malleability of the models
 <hr>
-
 
 ```{r echo=FALSE, fig.retina=3, out.width='750'}
 
@@ -21,7 +19,6 @@ knitr::include_graphics("figures/timestamp_paper.png")
 </br>
 
 ???
-A good test of a model is its versatility in explaining multiple datasets generated in diverse experimental settings.
 
 <p style="color:navy;">A good test of a model is its versatility in explaining multiple datasets generated in diverse experimental settings.</p>
 
@@ -32,15 +29,7 @@ A good test of a model is its versatility in explaining multiple datasets genera
 knitr::include_graphics("figures/ts_strategy1.png")
 ```
 
-???
-
-class: center, middle
-
-```{r echo=FALSE, fig.retina=3, out.width='600'}
-
-knitr::include_graphics("figures/timestamp_strategy2.png")
-```
-
+<hr>
 ---
 
 class: center
@@ -55,6 +44,11 @@ class: center, middle
 
 # Thanks!
 
+The models are coded in `Stan` programming language, are compiled using `CMDSTAN` interface and analysed in R using `Rstan` package.
+
+</br>
+</br>
+
+
 Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
 
-The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).

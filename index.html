@@ -275,13 +275,14 @@ $$
 - Each model was fitted simultaneously to the timecourses of `\(\small log(\text{counts})\)`   proportions of `\(\small logit(\text{Ki}67^{high})\)` cells.
 
 $$
-\text{Joint Likelihood} \Rightarrow p(y | \hat \theta) = \prod_{i=1}^n \, \text{Normal}(y_i - \text{model}(\theta)_i^\text{pred}, \, \sigma) 
+\text{Joint Likelihood} \Rightarrow \quad  p(y | \hat \theta) = \prod_{i=1}^n \, \text{Normal}(y_i - \text{model}(\theta)_i^\text{pred}, \, \sigma) 
 $$
 
 ???
-We form a joint likelihood for each model assuming the errors were normally distributed. 
+Each model was fitted simultaneously to the timecourses of `\(\small log(\text{counts})\)`   proportions of `\(\small logit(\text{Ki}67^{high})\)` cells.
 
-- Update prior beliefs `\(p(\theta_\text{prior})\)` in model parameter using bayesian approach.
+We form a joint likelihood which is the probability density of data across the parameter distribution `\(\theta\)` by assuming that the errors are normally distributed. 
+
 --
 
 $$
@@ -290,6 +291,11 @@ p(\hat \theta | y) = \frac{p(y | \hat \theta) \times p(\theta_\text{prior})} {p(
 $$
 
 &lt;hr&gt;
+???
+- This probability density is then used to update our prior beliefs in model parameters using the bayesian approach.
+
+
+
 --
 
 &lt;/br&gt;
@@ -298,6 +304,9 @@ $$
 Occam's razor:
 Models are selected based on **parsimony** and their ability to predict **New observations** &amp;mdash; (out-of-sample prediction error).
 ]
+
+??? 
+We judge the models under consideration based on **parsimony** and their ability to predict **New observations** which is also called as out of sample prediction error.
 
 ---
 
@@ -314,6 +323,10 @@ $$
 
 &lt;hr&gt;
 
+???
+We measure this  out of sample prediction error using Leave-One-Out cross validation, in which a single observation is treated as test dataset and rest of the observations are trated as training data. The process is repeated for all 'n' observations and the prediction error for each left-out test set is aggregated to calculate Leave-One-Out information criterion (LOOIC).
+
+
 --
 
 - Relative support: Akaike weight
@@ -322,6 +335,10 @@ $$
 \omega_i = \frac{exp(-\frac{1}{2} \, [\text{LooIC}]_i)}{\sum_m^M  \, exp(-\frac{1}{2} \, [\text{LooIC}]_m)}
 $$
 ]
+
+???
+We then used the estimated LOO-IC values to assess the relative support for models using the analog of the Akaike weight which gives us the probability that a given model will explain new data better than other models considered in this analysis.
+
 ---
 
 class: center, middle
@@ -496,9 +513,17 @@ class: center, middle
 
 # Thanks!
 
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+.left[
+The models are coded in `Stan` programming language, are compiled using `CMDSTAN` interface and analysed in R using `Rstan` package.
+]
 
-The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+&lt;/br&gt;
+
+&lt;/br&gt;
+
+.left[
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+]
 ---
 
 
