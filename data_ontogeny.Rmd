@@ -114,7 +114,7 @@ $beta$ - rate of loss of ki67 expression
 ### Model vaildation and comparison
 <hr>
 
-- Each model was fitted simultaneously to the timecourses of $ \small log(\text{counts})$   proportions of $\small logit(\text{Ki}67^{high})$ cells.
+- Each model was fitted simultaneously to the timecourses of $\small log(\text{counts})$   proportions of $\small logit(\text{Ki}67^{high})$ cells.
 
 $$
 \text{Joint Likelihood} \Rightarrow p(y | \hat \theta) = \prod_{i=1}^n \, \text{Normal}(y_i - \text{model}(\theta)_i^\text{pred}, \, \sigma) 
@@ -123,38 +123,47 @@ $$
 ???
 We form a joint likelihood for each model assuming the errors were normally distributed. 
 
+- Update prior beliefs $p(\theta_\text{prior})$ in model parameter using bayesian approach.
+--
+
+$$
+\text{Bayesian approach}\Rightarrow \quad 
+p(\hat \theta | y) = \frac{p(y | \hat \theta) \times p(\theta_\text{prior})} {p(y)}
+$$
+
+<hr>
 --
 
 </br>
 
-- Update prior beliefs $p(\theta_\text{prior})$ in model parameter using bayesian approach.
-
-$$
-p(\hat \theta | y) = \frac{p(y | \hat \theta) \times p(\theta_\text{prior})} {p(y)}
-$$
+.shadedbox2[
+Occam's razor: Models are selected based on **parsimony** and their ability to predict **New observations** &mdash; (out-of-sample prediction error).
+]
 
 ---
 
 <hr>
-
-### Models are selected based on **parsimony** and their ability to predict **out-of-sample prediction error.**
-
---
-
-- Mesuring out-of-sample prediction error using Leave-One-Out cross validation.
+### Mesuring out-of-sample prediction error using Leave-One-Out cross validation.
 
 ```{r echo=FALSE, fig.retina=3, out.width="40%"}
 
 knitr::include_graphics("figures/looic.png")
 ```
 
+
+$$
+\text{Leave-One-Out information criterion:} \,\,
+\small \text{LooIC} = -2 \,\, \sum_{i=1}^n \, Z_i
+$$
+
 <hr>
+
 --
 
-- Relative support- Akaike weight
+- Relative support: Akaike weight
 .shadedbox[
 $$
-\omega_i = \frac{exp(-\frac{1}{2} \, [\text{Loo-ic}]_i)}{\sum_m^M  \, exp(-\frac{1}{2} \, [\text{Loo-ic}]_m)}
+\omega_i = \frac{exp(-\frac{1}{2} \, [\text{LooIC}]_i)}{\sum_m^M  \, exp(-\frac{1}{2} \, [\text{LooIC}]_m)}
 $$
 ]
 ---
@@ -195,7 +204,7 @@ knitr::include_graphics("figures/cd8_compare1.png")
 
 ---
 
-### .left[Two compartment Models]
+### .left[Two-compartment models]
 <hr>
 
 
