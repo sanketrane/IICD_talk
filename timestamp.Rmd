@@ -1,0 +1,60 @@
+
+class: center, middle
+
+### A good test of a model is its versatility in explaining multiple datasets generated in diverse experimental settings.
+
+---
+
+class: inverse
+background-image: url("figures/inverse_bg.png")
+
+
+### Malleability of the models
+<hr>
+
+
+```{r echo=FALSE, fig.retina=3, out.width='750'}
+
+knitr::include_graphics("figures/timestamp_paper.png")
+```
+
+</br>
+
+???
+A good test of a model is its versatility in explaining multiple datasets generated in diverse experimental settings.
+
+<p style="color:navy;">A good test of a model is its versatility in explaining multiple datasets generated in diverse experimental settings.</p>
+
+--
+
+```{r echo=FALSE, fig.retina=3, out.width='750'}
+
+knitr::include_graphics("figures/ts_strategy1.png")
+```
+
+???
+
+class: center, middle
+
+```{r echo=FALSE, fig.retina=3, out.width='600'}
+
+knitr::include_graphics("figures/timestamp_strategy2.png")
+```
+
+---
+
+class: center
+## Summary
+
+--
+
+## Whats Next?
+---
+
+class: center, middle
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+
+The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).

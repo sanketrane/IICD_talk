@@ -79,7 +79,6 @@ knitr::include_graphics("figures/neutral_diag.png")
 ```
 
 .left[
-.shadedbox2[
 $$
 \small
 \begin{aligned}
@@ -88,8 +87,10 @@ $$
 \end{aligned}
 $$
 ]
-]
+
 --
+
+</br>
 
 .shadedbox[
 $$
@@ -137,7 +138,8 @@ $$
 </br>
 
 .shadedbox2[
-Occam's razor: Models are selected based on **parsimony** and their ability to predict **New observations** &mdash; (out-of-sample prediction error).
+Occam's razor:
+Models are selected based on **parsimony** and their ability to predict **New observations** &mdash; (out-of-sample prediction error).
 ]
 
 ---
@@ -177,6 +179,7 @@ class: center, middle
 knitr::include_graphics("figures/cd4_tab1.png")
 ```
 
+--
 
 ```{r echo=FALSE, fig.retina=3}
 
@@ -195,6 +198,7 @@ class: center, middle
 knitr::include_graphics("figures/cd8_tab1.png")
 ```
 
+--
 
 ```{r echo=FALSE, fig.retina=3}
 
@@ -232,6 +236,7 @@ class: center, middle
 knitr::include_graphics("figures/cd4_tab2.png")
 ```
 
+--
 
 ```{r echo=FALSE, fig.retina=3}
 
@@ -248,6 +253,7 @@ class: center, middle
 knitr::include_graphics("figures/cd8_tab2.png")
 ```
 
+--
 
 ```{r echo=FALSE, fig.retina=3}
 
@@ -256,7 +262,6 @@ knitr::include_graphics("figures/cd8_compare2.png")
 
 
 ---
-
 
 ### Adaptation: age-structured models
 <hr>
@@ -290,6 +295,7 @@ class: center, middle
 knitr::include_graphics("figures/cd4_tab3.png")
 ```
 
+--
 
 ```{r echo=FALSE, fig.retina=3}
 
@@ -298,8 +304,6 @@ knitr::include_graphics("figures/cd4_compare3.png")
 
 
 ---
-
-
 class: center, middle
 
 ```{r echo=FALSE, fig.retina=3}
@@ -307,7 +311,7 @@ class: center, middle
 knitr::include_graphics("figures/cd8_tab3.png")
 ```
 
-
+--
 
 ```{r echo=FALSE, fig.retina=3}
 
@@ -315,18 +319,19 @@ knitr::include_graphics("figures/cd8_compare3.png")
 ```
 
 ---
+
 class: center
 ## Summary
 
+Cant discriminate between models.
+Equivocal support from ontogeny data.
+Density-dependece explains dynamics early on in life?
+ASM explains dynamics post hymic involution?
+Untangling Net growth into division and loss. 
 --
 
 ## Whats Next?
----
+Agent based models to predict Rag GFP data.
+Also, simulating TCR repertoire dynamics.
 
-class: center, middle
 
-# Thanks!
-
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
-
-The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
