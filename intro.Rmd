@@ -34,8 +34,6 @@ There is some evidence in the field that the dynamics of RTE are different than 
 
 knitr::include_graphics("figures/intro_counts1.png")
 ```
---
-count: false
 
 </br>
 
