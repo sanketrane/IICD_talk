@@ -7,9 +7,9 @@
 
 </br>
 
-```{r echo=FALSE, fig.retina=3}
+```{r echo=FALSE}
 
-knitr::include_graphics("figures/counts_data.png")
+knitr::include_graphics("figures/counts_data.jpeg")
 ```
 
 ---
@@ -20,10 +20,14 @@ knitr::include_graphics("figures/counts_data.png")
 - $\small \text{Ki}67$ — a nuclear protein expressed during cell-division.
 
 </br>
+
+
 ```{r echo=FALSE, fig.retina=3}
 
-knitr::include_graphics("figures/ki_data.png")
+knitr::include_graphics("figures/ki_data.jpeg")
 ```
+
+
 ---
 class: inverse
 background-image: url("figures/inverse_bg.png")
@@ -37,13 +41,12 @@ knitr::include_graphics("figures/ki67_untangle.png")
 ]
 .pull-right[
 </br>
-- T cells express Ki67 protein for ~ 4 days after the division.
+- T cells continue expressing Ki67 protein for ~ 4 days after the division.
 .right[Hogan _et. al._, PNAS 2015]
 ]
 - Hard to untangle the origin of Ki67 expression within peripheral naive T cells.
 **Thymic Inheritance or division in periphery?**
 
-</br>
 <hr>
 --
 
@@ -54,7 +57,7 @@ knitr::include_graphics("figures/ki67_untangle.png")
 
 --
 
-- can dissect the heterogeneity in **'homeostatic fitness'** amongst naive T cells.
+- can dissect the heterogeneity in **'homeostatic fitness'** among naive T cells.
 
 ---
 

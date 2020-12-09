@@ -4,7 +4,7 @@
     <title>T cells: Ontogeny and Maintenance</title>
     <meta charset="utf-8" />
     <meta name="author" content="Sanket Rane" />
-    <meta name="date" content="2020-12-08" />
+    <meta name="date" content="2020-12-09" />
     <script src="libs/kePrint/kePrint.js"></script>
     <link href="libs/lightable/lightable.css" rel="stylesheet" />
     <link rel="stylesheet" href="My-xaringan-themer.css" type="text/css" />
@@ -17,7 +17,7 @@ class: center, middle, inverse, title-slide
 # T cells: Ontogeny and Maintenance
 ### Sanket Rane
 ### IICD &amp; Dept of Patholgy and Cell Biology
-### 2020-12-08
+### 2020-12-09
 
 ---
 
@@ -71,6 +71,7 @@ count: false
 
 
 --
+name: naivedynamics-slide
 count: false
 
 &lt;/br&gt;
@@ -179,7 +180,7 @@ background-image: url("figures/inverse_bg.png")
 
 &lt;/br&gt;
 
-&lt;img src="figures/counts_data.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figures/counts_data.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -189,7 +190,11 @@ background-image: url("figures/inverse_bg.png")
 - `\(\small \text{Ki}67\)` — a nuclear protein expressed during cell-division.
 
 &lt;/br&gt;
-&lt;img src="figures/ki_data.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+&lt;img src="figures/ki_data.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
+
+
 ---
 class: inverse
 background-image: url("figures/inverse_bg.png")
@@ -200,13 +205,12 @@ background-image: url("figures/inverse_bg.png")
 ]
 .pull-right[
 &lt;/br&gt;
-- T cells express Ki67 protein for ~ 4 days after the division.
+- T cells continue expressing Ki67 protein for ~ 4 days after the division.
 .right[Hogan _et. al._, PNAS 2015]
 ]
 - Hard to untangle the origin of Ki67 expression within peripheral naive T cells.
 **Thymic Inheritance or division in periphery?**
 
-&lt;/br&gt;
 &lt;hr&gt;
 --
 
@@ -217,7 +221,7 @@ background-image: url("figures/inverse_bg.png")
 
 --
 
-- can dissect the heterogeneity in **'homeostatic fitness'** amongst naive T cells.
+- can dissect the heterogeneity in **'homeostatic fitness'** among naive T cells.
 
 ---
 
@@ -337,12 +341,13 @@ We then used the estimated LOO-IC values to assess the relative support for mode
 ---
 
 
-
 class: center
 
-### .left[Fits for CD4 data]
+&lt;/br&gt;
 
-&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+
+&lt;table class="table" style="font-size: 15px; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption style="font-size: initial !important;"&gt;Statistical analysis for CD4 data&lt;/caption&gt;
  &lt;thead&gt;
   &lt;tr&gt;
    &lt;th style="text-align:left;"&gt; Model &lt;/th&gt;
@@ -375,12 +380,13 @@ class: center
 
 
 ---
-
 class: center
 
-### .left[Fits for CD8 data]
+&lt;/br&gt;
 
-&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+
+&lt;table class="table" style="font-size: 15px; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption style="font-size: initial !important;"&gt;Statistical analysis for CD8 data&lt;/caption&gt;
  &lt;thead&gt;
   &lt;tr&gt;
    &lt;th style="text-align:left;"&gt; Model &lt;/th&gt;
@@ -434,7 +440,8 @@ class: center
 &lt;/br&gt;
 
 
-&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+&lt;table class="table" style="font-size: 15px; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption style="font-size: initial !important;"&gt;Statistical analysis for CD4 data&lt;/caption&gt;
  &lt;thead&gt;
   &lt;tr&gt;
    &lt;th style="text-align:left;"&gt; Model &lt;/th&gt;
@@ -482,7 +489,8 @@ class: center
 &lt;/br&gt;
 
 
-&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+&lt;table class="table" style="font-size: 15px; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption style="font-size: initial !important;"&gt;Statistical analysis for CD8 data&lt;/caption&gt;
  &lt;thead&gt;
   &lt;tr&gt;
    &lt;th style="text-align:left;"&gt; Model &lt;/th&gt;
@@ -527,7 +535,7 @@ class: center
 
 ---
 
-### Adaptation: age-structured models
+### Adaptation: age-structured model
 &lt;hr&gt;
 
 
@@ -537,7 +545,7 @@ class: center
 
 &lt;/br&gt;
 
-Naive T cells of age 'a' and Ki67 expression 'k' are tracked over time by analytically solving the 3 dimensional PDE,
+Naive T cells of age 'a' and Ki67 expression 'k' are tracked across time 't', by analytically solving the 3-dimensional PDE,
 
 .shadedbox[
 $$
@@ -550,7 +558,11 @@ $$
 ---
 class: center
 
-&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+&lt;/br&gt;
+
+
+&lt;table class="table" style="font-size: 15px; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption style="font-size: initial !important;"&gt;Statistical analysis for CD4 data&lt;/caption&gt;
  &lt;thead&gt;
   &lt;tr&gt;
    &lt;th style="text-align:left;"&gt; Model &lt;/th&gt;
@@ -585,12 +597,12 @@ class: center
    &lt;td style="text-align:right;"&gt; 9.23 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; ASM δ-varying &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; ASM δ-varying with cell-age &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 5.98 &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 2.99 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; ASM ρ-varying &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; ASM ρ-varying with cell-age &lt;/td&gt;
    &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 2.19 &lt;/td&gt;
    &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 19.89 &lt;/td&gt;
   &lt;/tr&gt;
@@ -605,7 +617,10 @@ class: center
 ---
 class: center
 
-&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+&lt;/br&gt;
+
+&lt;table class="table" style="font-size: 15px; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption style="font-size: initial !important;"&gt;Statistical analysis for CD8 data&lt;/caption&gt;
  &lt;thead&gt;
   &lt;tr&gt;
    &lt;th style="text-align:left;"&gt; Model &lt;/th&gt;
@@ -640,12 +655,12 @@ class: center
    &lt;td style="text-align:right;"&gt; 0.05 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; ASM δ-varying &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; ASM δ-varying with cell-age &lt;/td&gt;
    &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 2.14 &lt;/td&gt;
    &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 24.25 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; ASM ρ-varying &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; ASM ρ-varying with cell-age &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 12.22 &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 0.16 &lt;/td&gt;
   &lt;/tr&gt;
@@ -658,19 +673,29 @@ class: center
 
 ---
 
-class: center
-## Summary
+### Summary from the ontogeny data
+&lt;hr&gt;
 
-Cant discriminate between models.
-Equivocal support from ontogeny data.
+- Naive CD4 and CD8 T cells follow distinct dynamics early on in life.&lt;/br&gt;
+&amp;#8618; Agrees with the &lt;a href="#naivedynamics-slide"; style="color:blue;"&gt;thymic export profile &lt;/a&gt; of CD4 and CD8 RTE.
+
+- Equivocal support for age-structured and density-dependence models.
+
+???
 Density-dependece explains dynamics early on in life?
 ASM explains dynamics post hymic involution?
 Untangling Net growth into division and loss. 
+
 --
 
-## Whats Next?
-Agent based models to predict Rag GFP data.
-Also, simulating TCR repertoire dynamics.
+&lt;/br&gt;
+
+### Whats Next?
+- Measuring Ki67 expression in **RAG-GFP** neonatal mice. &lt;/br&gt;
+&amp;#8618; Information on the extent of cell division in young naive T cells early on in life.
+
+- Agent-based models to predict **RAG-GFP** data. &lt;/br&gt;
+&amp;#8618; Simulating TCR repertoire dynamics using the parameter estimates from the best-fit model.
 
 
 
@@ -685,11 +710,12 @@ class: center, middle
 ### A good test of a model is its versatility in explaining multiple datasets generated in diverse experimental settings.
 
 ---
-
 class: inverse
 background-image: url("figures/inverse_bg.png")
 
 &lt;hr&gt;
+&lt;/br&gt;
+
 
 &lt;img src="figures/timestamp_paper.png" width="750" style="display: block; margin: auto;" /&gt;
 
@@ -701,7 +727,133 @@ background-image: url("figures/inverse_bg.png")
 
 --
 
-&lt;img src="figures/ts_strategy1.png" width="750" style="display: block; margin: auto;" /&gt;
+&lt;img src="figures/ts_strategy1.png" width="750px" style="display: block; margin: auto;" /&gt;
+
+&lt;hr&gt;
+---
+
+&lt;hr&gt;
+
+&lt;img src="figures/tmstmp_data.jpeg" width="65%" style="display: block; margin: auto;" /&gt;
+
+--
+
+&lt;/br&gt;
+
+### &lt;u&gt;Need for Hierrarchical modelling:&lt;/u&gt;
+
+- **Pooling information among cohorts** while fitting models.
+
+--
+
+- Within cohorts **repeat sampling on individual mice** &amp;mdash; Pooling information among mice.
+
+&lt;hr&gt;
+
+???
+- The slope of 'decay curve' informs on the dependence of &lt;strong&gt;net loss rate&lt;/strong&gt; (death - division) on cell-age.
+
+
+- The difference in in slopes of each cohort informs on effects of host age.
+
+&lt;/br&gt;
+
+---
+### Hierarchical age-structured model
+&lt;hr&gt;
+
+No information on cell division in this system &lt;/br&gt;
+&amp;#8618; We track cell-age in this system using,
+
+.shadedbox2[
+$$
+\small
+`\begin{aligned}
+\frac{\partial N}{\partial t} + \frac{\partial N}{\partial a} = -\lambda(a) \,\, N(t, a), 
+\end{aligned}`
+$$
+]
+where `\(\small \lambda = \delta - \rho  \quad \rightarrow\)` net loss rate.
+
+--
+
+&lt;/br&gt;
+
+The solution of this PDE `\(\small \Rightarrow f(t, N_0, \lambda)\)`,
+- `\(\small N_0\)` - the initial counts of timestamped cells at time 0. 
+- `\(\small \lambda\)` - net rate of loss &amp;mdash; varies with cell age.
+
+???
+Since we have no information on cell division in this system,
+ASM reduces down to a 2-dimensional PDE.
+
+- `\(\small \gamma\)` - the rate with which `\(\small \lambda_0\)` varies with cell-age _i.e._ 
+`\(\small \lambda_0 \, e^{-\gamma \,a}\)`. 
+---
+&lt;hr&gt;
+&lt;/br&gt;
+
+
+&lt;table class="table" style="font-size: 15px; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption style="font-size: initial !important;"&gt;Comparison of the ASM hierarchical models&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; ΔLooIC &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Akaike weight % &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; N0: mice and λ: cohort &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 0.00 &lt;/td&gt;
+   &lt;td style="text-align:right;font-weight: bold;color: navy !important;background-color: skyblue !important;"&gt; 100 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; N0: mice and λ: mice &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 73.06 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; N0: cohort and λ: mice &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 313.94 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; N0: mice &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 316.71 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+--
+
+&lt;/br&gt;
+
+&lt;img src="figures/tmstmp_fit.jpeg" width="65%" style="display: block; margin: auto;" /&gt;
+
+&lt;hr&gt;
+
+---
+class: inverse
+background-image: url("figures/inverse_bg.png")
+
+&lt;hr&gt;
+
+&lt;img src="figures/tmstmp_N0.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
+
+--
+
+.pull-left[
+&lt;img src="figures/tmstmp_lambda1.jpeg" width="250" style="display: block; margin: auto;" /&gt;
+]
+
+--
+
+.pull-right[
+&lt;img src="figures/mouse_wise_4.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
 
 &lt;hr&gt;
 ---
@@ -718,13 +870,20 @@ class: center, middle
 
 # Thanks!
 
+&lt;/br&gt;
+&lt;/br&gt;
+&lt;/br&gt;
+&lt;/br&gt;
+
 The models are coded in `Stan` programming language, are compiled using `CMDSTAN` interface and analysed in R using `Rstan` package.
 
 &lt;/br&gt;
 &lt;/br&gt;
+&lt;/br&gt;
+&lt;/br&gt;
 
 
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+Slides created in `html` using [remark.js](https://remarkjs.com) and R packages [**knitr**](http://yihui.name/knitr) and [**xaringan**](https://github.com/yihui/xaringan).
 
 ---
     </textarea>

@@ -47,6 +47,7 @@ knitr::include_graphics("figures/intro_counts2.png")
 
 
 --
+name: naivedynamics-slide
 count: false
 
 </br>

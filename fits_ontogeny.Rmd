@@ -1,7 +1,7 @@
-
 class: center
 
-### .left[Fits for CD4 data]
+</br>
+
 
 ```{r echo=FALSE, fig.retina=3}
 ## function for exporting a data table of delta loo ic values and akaike weights
@@ -23,8 +23,8 @@ models_list1 <- c('Neutral', 'LIP', 'Density-dependent loss')
 looic_cd4_loolist1 <- c(132.9, 134.5, 127.7)
 cd4_table1 <- model_compare(models_list1, looic_cd4_loolist1)
 cd4_table1 %>%
-  kable(booktabs = T) %>%
-  kable_styling() %>%
+   kable(caption = "Statistical analysis for CD4 data") %>%
+  kable_styling(font_size = 15) %>%
   row_spec(which(cd4_table1$ΔLooIC == 0), bold = T, color = "navy", background = "skyblue")
 
 ```
@@ -38,18 +38,18 @@ knitr::include_graphics("figures/cd4_compare1.png")
 
 
 ---
-
 class: center
 
-### .left[Fits for CD8 data]
+</br>
+
 
 ```{r echo=FALSE, fig.retina=3}
 
 looic_cd8_loolist1 <- c(153.0943, 139.9556, 145.4329)
 cd8_table1 <- model_compare(models_list1, looic_cd8_loolist1)
 cd8_table1 %>%
-  kable(booktabs = T) %>%
-  kable_styling() %>%
+  kable(caption = "Statistical analysis for CD8 data") %>%
+  kable_styling(font_size = 15) %>%
   row_spec(which(cd8_table1$ΔLooIC == 0), bold = T, color = "navy", background = "skyblue")
 
 ```
@@ -95,8 +95,8 @@ models_list2 <- c('Neutral', 'LIP', 'Density-dependent loss', "RTE", "RTE matura
 looic_cd4_loolist2 <- c(132.9, 134.5, 127.7, 134.57, 131.43)
 cd4_table2 <- model_compare(models_list2, looic_cd4_loolist2)
 cd4_table2 %>%
-  kable(booktabs = T) %>%
-  kable_styling() %>%
+  kable(caption = "Statistical analysis for CD4 data") %>%
+  kable_styling(font_size = 15) %>%
   row_spec(which(cd4_table2$ΔLooIC <= 3), bold = T, color = "navy", background = "skyblue")
 
 ```
@@ -119,8 +119,8 @@ class: center
 looic_cd8_loolist2<- c(153.0943, 139.9556, 145.4329, 151.7188, 154.3836)
 cd8_table2 <- model_compare(models_list2, looic_cd8_loolist2)
 cd8_table2 %>%
-  kable(booktabs = T) %>%
-  kable_styling() %>%
+  kable(caption = "Statistical analysis for CD8 data") %>%
+  kable_styling(font_size = 15) %>%
   row_spec(which(cd8_table2$ΔLooIC <= 3), bold = T, color = "navy", background = "skyblue")
 
 ```
@@ -136,7 +136,7 @@ knitr::include_graphics("figures/cd8_compare2.png")
 
 ---
 
-### Adaptation: age-structured models
+### Adaptation: age-structured model
 <hr>
 
 
@@ -149,7 +149,7 @@ knitr::include_graphics("figures/asm_diag.png")
 
 </br>
 
-Naive T cells of age 'a' and Ki67 expression 'k' are tracked over time by analytically solving the 3 dimensional PDE,
+Naive T cells of age 'a' and Ki67 expression 'k' are tracked across time 't', by analytically solving the 3-dimensional PDE,
 
 .shadedbox[
 $$
@@ -162,15 +162,18 @@ $$
 ---
 class: center
 
+</br>
+
+
 ```{r echo=FALSE, fig.retina=3}
 models_list3 <- c('Neutral', 'LIP', 'Density-dependent loss', "RTE",
-                  "RTE maturation linked division", paste0('ASM ', '\u03b4', '-varying'),
-                  paste0('ASM ', '\u03c1', '-varying'))
+                  "RTE maturation linked division", paste0('ASM ', '\u03b4', '-varying with cell-age'),
+                  paste0('ASM ', '\u03c1', '-varying with cell-age' ))
 looic_cd4_loolist3 <- c(132.9, 134.5, 127.7, 134.57, 131.43, 133.6814, 129.8941)
 cd4_table3 <- model_compare(models_list3, looic_cd4_loolist3)
 cd4_table3 %>%
-  kable(booktabs = T) %>%
-  kable_styling() %>%
+   kable(caption = "Statistical analysis for CD4 data") %>%
+  kable_styling(font_size = 15) %>%
   row_spec(which(cd4_table3$ΔLooIC <= 3), bold = T, color = "navy", background = "skyblue")
 
 ```
@@ -186,12 +189,14 @@ knitr::include_graphics("figures/cd4_compare3.png")
 ---
 class: center
 
+</br>
+
 ```{r echo=FALSE, fig.retina=3}
 looic_cd8_loolist3<- c(153.0943, 139.9556, 145.4329, 151.7188, 154.3836, 142.0947, 152.1801)
 cd8_table3 <- model_compare(models_list3, looic_cd8_loolist3)
 cd8_table3 %>%
-  kable(booktabs = T) %>%
-  kable_styling() %>%
+   kable(caption = "Statistical analysis for CD8 data") %>%
+  kable_styling(font_size = 15) %>%
   row_spec(which(cd8_table3$ΔLooIC <= 3), bold = T, color = "navy", background = "skyblue")
 
 ```
@@ -205,18 +210,28 @@ knitr::include_graphics("figures/cd8_compare3.png")
 
 ---
 
-class: center
-## Summary
+### Summary from the ontogeny data
+<hr>
 
-Cant discriminate between models.
-Equivocal support from ontogeny data.
+- Naive CD4 and CD8 T cells follow distinct dynamics early on in life.</br>
+&#8618; Agrees with the <a href="#naivedynamics-slide"; style="color:blue;">thymic export profile </a> of CD4 and CD8 RTE.
+
+- Equivocal support for age-structured and density-dependence models.
+
+???
 Density-dependece explains dynamics early on in life?
 ASM explains dynamics post hymic involution?
 Untangling Net growth into division and loss. 
+
 --
 
-## Whats Next?
-Agent based models to predict Rag GFP data.
-Also, simulating TCR repertoire dynamics.
+</br>
+
+### Whats Next?
+- Measuring Ki67 expression in **RAG-GFP** neonatal mice. </br>
+&#8618; Information on the extent of cell division in young naive T cells early on in life.
+
+- Agent-based models to predict **RAG-GFP** data. </br>
+&#8618; Simulating TCR repertoire dynamics using the parameter estimates from the best-fit model.
 
 

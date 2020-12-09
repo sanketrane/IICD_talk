@@ -5,11 +5,12 @@ class: center, middle
 ### A good test of a model is its versatility in explaining multiple datasets generated in diverse experimental settings.
 
 ---
-
 class: inverse
 background-image: url("figures/inverse_bg.png")
 
 <hr>
+</br>
+
 
 ```{r echo=FALSE, fig.retina=3, out.width='750'}
 
@@ -24,10 +25,145 @@ knitr::include_graphics("figures/timestamp_paper.png")
 
 --
 
-```{r echo=FALSE, fig.retina=3, out.width='750'}
+```{r echo=FALSE, fig.retina=3, out.width='750px'}
 
 knitr::include_graphics("figures/ts_strategy1.png")
 ```
+
+<hr>
+---
+
+<hr>
+
+```{r echo=FALSE, fig.retina=3, out.width='65%'}
+
+knitr::include_graphics("figures/tmstmp_data.jpeg")
+```
+
+--
+
+</br>
+
+### <u>Need for Hierrarchical modelling:</u>
+
+- **Pooling information among cohorts** while fitting models.
+
+--
+
+- Within cohorts **repeat sampling on individual mice** &mdash; Pooling information among mice.
+
+<hr>
+
+???
+- The slope of 'decay curve' informs on the dependence of <strong>net loss rate</strong> (death - division) on cell-age.
+
+
+- The difference in in slopes of each cohort informs on effects of host age.
+
+</br>
+
+---
+### Hierarchical age-structured model
+<hr>
+
+No information on cell division in this system </br>
+&#8618; We track cell-age in this system using,
+
+.shadedbox2[
+$$
+\small
+\begin{aligned}
+\frac{\partial N}{\partial t} + \frac{\partial N}{\partial a} = -\lambda(a) \,\, N(t, a), 
+\end{aligned}
+$$
+]
+where $\small \lambda = \delta - \rho  \quad \rightarrow$ net loss rate.
+
+--
+
+</br>
+
+The solution of this PDE $\small \Rightarrow f(t, N_0, \lambda)$,
+- $\small N_0$ - the initial counts of timestamped cells at time 0. 
+- $\small \lambda$ - net rate of loss &mdash; varies with cell age.
+
+???
+Since we have no information on cell division in this system,
+ASM reduces down to a 2-dimensional PDE.
+
+- $\small \gamma$ - the rate with which $\small \lambda_0$ varies with cell-age _i.e._ 
+$\small \lambda_0 \, e^{-\gamma \,a}$. 
+---
+<hr>
+</br>
+
+
+```{r echo=FALSE, fig.retina=3}
+library(kableExtra)
+model_compare <- function(looiclist){
+  deltaloo_list <- looiclist - min(looiclist) # delta loo-ic
+  akaikewt_numerator <- function(x) exp(-0.5 * x) ## akaike wt
+  akaikewt_list <- sapply(deltaloo_list, akaikewt_numerator) * 100/sum(exp(- 0.5 * deltaloo_list))
+  export_table <- data.frame('deltaloo' = round(deltaloo_list, 2),
+                             'Akaike_wt' = round(akaikewt_list, 2))
+  colnames(export_table)[1:2] <-  c(paste0('\u0394', 'LooIC'), 
+                                    paste0('Akaike weight ', '\u0025'))
+  return(export_table)
+}
+
+
+ts_loolist1 <- c(-79.811369, -6.756027, 234.129347, 236.897557)
+ts_table1 <- model_compare(ts_loolist1)
+rownames(ts_table1) <- c(paste0("N0: mice and ", '\u03bb', ': cohort'),
+                         paste0("N0: mice and ", '\u03bb', ': mice'),
+                         paste0("N0: cohort and ", '\u03bb', ': mice'),
+                         paste0("N0: mice"))
+ts_table1 %>%
+  kable(caption = "Comparison of the ASM hierarchical models") %>%
+  kable_styling(font_size = 15) %>%
+  row_spec(which(ts_table1$ΔLooIC == 0), bold = T, color = "navy", background = "skyblue")
+
+```
+
+--
+
+</br>
+
+```{r echo=FALSE, fig.retina=3, out.width='65%'}
+
+knitr::include_graphics("figures/tmstmp_fit.jpeg")
+```
+
+<hr>
+
+---
+class: inverse
+background-image: url("figures/inverse_bg.png")
+
+<hr>
+
+```{r echo=FALSE, fig.retina=3}
+
+knitr::include_graphics("figures/tmstmp_N0.jpeg")
+```
+
+--
+
+.pull-left[
+```{r echo=FALSE, fig.retina=3, out.width='250'}
+
+knitr::include_graphics("figures/tmstmp_lambda1.jpeg")
+```
+]
+
+--
+
+.pull-right[
+```{r echo=FALSE, fig.retina=3}
+
+knitr::include_graphics("figures/mouse_wise_4.png")
+```
+]
 
 <hr>
 ---
@@ -44,11 +180,18 @@ class: center, middle
 
 # Thanks!
 
+</br>
+</br>
+</br>
+</br>
+
 The models are coded in `Stan` programming language, are compiled using `CMDSTAN` interface and analysed in R using `Rstan` package.
 
 </br>
 </br>
+</br>
+</br>
 
 
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+Slides created in `html` using [remark.js](https://remarkjs.com) and R packages [**knitr**](http://yihui.name/knitr) and [**xaringan**](https://github.com/yihui/xaringan).
 
