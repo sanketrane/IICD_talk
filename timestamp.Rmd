@@ -168,12 +168,25 @@ knitr::include_graphics("figures/mouse_wise_4.png")
 <hr>
 ---
 
-class: center
-## Summary
+### Summary from the timestamp data
+<hr>
+
+- Age-structured model can explain naive T cell dynamics in diverse settings.
+
+- The hierarchical model reveals cohort-specific effects on the net loss rate $\small \lambda$ of naive T cells.
+
+- The major distinction in cohorts is the ** age of the host ** when naive T cells were stamped.</br>
+&#8618; Possible host-age effects in naive T cell maintenance?
 
 --
 
-## Whats Next?
+### Whats Next?
+
+- Adopt density-dependence model to fit on the timestamp data.
+
+- Include host-age dependence in ASM and refit on the ontogeny data.
+
+
 ---
 
 class: center, middle
