@@ -29,7 +29,6 @@ cd4_table1 %>%
 
 ```
 
---
 
 ```{r echo=FALSE, fig.retina=3}
 
@@ -54,7 +53,6 @@ cd8_table1 %>%
 
 ```
 
---
 
 ```{r echo=FALSE, fig.retina=3}
 
@@ -101,8 +99,6 @@ cd4_table2 %>%
 
 ```
 
---
-
 
 ```{r echo=FALSE, fig.retina=3}
 
@@ -125,7 +121,6 @@ cd8_table2 %>%
 
 ```
 
---
 
 ```{r echo=FALSE, fig.retina=3}
 
@@ -178,7 +173,6 @@ cd4_table3 %>%
 
 ```
 
---
 
 ```{r echo=FALSE, fig.retina=3}
 
@@ -201,7 +195,6 @@ cd8_table3 %>%
 
 ```
 
---
 
 ```{r echo=FALSE, fig.retina=3}
 
@@ -231,7 +224,7 @@ Untangling Net growth into division and loss.
 - Measuring Ki67 expression in **RAG-GFP** neonatal mice. </br>
 &#8618; Information on the extent of cell division in young naive T cells early on in life.
 
-- Agent-based models to predict **RAG-GFP** data. </br>
+- Stochastic models (Agent-based) to predict **RAG-GFP** data. </br>
 &#8618; Simulating TCR repertoire dynamics using the parameter estimates from the best-fit model.
 
 

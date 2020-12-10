@@ -140,7 +140,7 @@ This has consequences on how diversity in maintained over lifetime.
 --
 
 ### How are naive T cells maintained after thymic involution?
-- Quorum sensing in naive T cel homeostasis to preserve the numbers?</br>
+- Quorum sensing in naive T cell homeostasis to preserve the numbers?</br>
 &#8618; Compensatory increase in cell division or decrease in turnover or both?
 
 
@@ -151,18 +151,16 @@ Is there Compensatory increase in cell division? or decrease in their loss? or b
 ## What we know and don’t know
 <hr>
 
-Most of our understanding of naive T cell homeostasis comes from studies in adult mice.
-
-???
-Relatively little is known about their neonatal dynamics.
+Most of our understanding of naive T cell homeostasis comes from studies in adult mice.</br>
+&#8618; Relatively little is known about their neonatal dynamics.
 
 --
 
 ### 1. Heterogeneity in naive T cell pool </br>
 &#8594; We have shown that naive T cells' ability to persist in the circulation increases with their cell-age **(first-in-last-out rule).** 
-- Shown in diverse experimental settings in mice. .right[Hogan _et. al._ PNAS 2015. Rane _et. al._ Plos Bio 2018].
+- Shown in diverse experimental settings in adult mice. .right[Hogan _et. al._, PNAS 2015. Rane _et. al._ Plos Bio 2018].
 </br>
-- With the use of $C^{14}$ dating in humans. .right[Mold _et. al._ Plos Bio 2019]
+- With the use of $C^{14}$ dating in humans (age: 20-65 years). .right[Mold _et. al._ Plos Bio 2019]
 </br>
 
 ### Can cell-age dependence explain naive T cell development in neonatal niches?
@@ -238,8 +236,6 @@ So, mostly through this work we want to study the Mechanisms that regulate T cel
 - How cd4 and cd8 repertoire evolve and how different they are
 
 
---
-
 </br>
 
 ## .center[A quantitative map of our immune competence.]
@@ -284,7 +280,7 @@ background-image: url("figures/inverse_bg.png")
 
 <hr>
 
-- The adaptation model captured the naive T cell dynamics studied multiple datasets generated across  diverse experimental setups in adult mice</br>
+- The adaptation model captured the naive T cell dynamics studied across multiple datasets generated in diverse experimental setups in adult mice.</br>
 &#8618; Rest of the models in isolation failed with one ore more datasets.
 
 ???
@@ -294,9 +290,9 @@ However, we haven't ruled out the possibility that these models may be acting in
 
 --
 
-- In previous studies, we examined the **Net Growth (division - loss)** rate of naive T cells.</br>
+- In previous studies, we modeled the **Net Growth (division - loss)** rate of naive T cells.</br>
 &#8618; Untangling division and loss is crucial for understanding repertoire dynamics.
-
+ 
 --
 
 </br>

@@ -17,7 +17,7 @@ Data from a mouse system that allows us to track cohorts of naive T cells as the
 
 ---
 
-### Variation in Naive T cell pool size and cell division
+### Dynamics of Naive T cell pool size and Ki67 expression
 <hr>
 
 
@@ -44,7 +44,7 @@ knitr::include_graphics("figures/ki_data.jpeg")
 
 ---
 class: center
-### .left[Homogeneous Models]
+### .left[Neutral and Competition Models]
 <hr>
 
 ```{r echo=FALSE, fig.retina=3, out.width='420'}
@@ -83,7 +83,7 @@ $$
 ### Model vaildation and comparison
 <hr>
 
-- Each model was fitted simultaneously to the timecourses of $\small log(\text{counts})$   proportions of $\small logit(\text{Ki}67^{high})$ cells.
+- Each model was fitted simultaneously to the timecourses of $\small log(\text{counts})$  and $\small logit(\text{Ki}67^\text{high}\text{ proportions})$ cells.
 
 $$
 \text{Joint Likelihood} \Rightarrow \quad  p(y | \hat \theta) = \prod_{i=1}^n \, \text{Normal}(y_i - \text{model}(\theta)_i^\text{pred}, \, \sigma) 

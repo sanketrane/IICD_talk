@@ -76,7 +76,7 @@ $$
 \end{aligned}
 $$
 ]
-where, $\small \lambda = \delta - \rho  \quad \rightarrow$ net loss rate.
+where, $\small \lambda = \delta - \rho  \quad \rightarrow$ net loss rate $\quad \quad \lambda(a) = \lambda_0 \, exp(-\gamma \, age)$
 
 --
 
@@ -84,7 +84,7 @@ where, $\small \lambda = \delta - \rho  \quad \rightarrow$ net loss rate.
 
 </br>
 
-We can define the model as,
+We define the model as,
 
 .shadedbox2[
 $$
@@ -141,7 +141,6 @@ ts_table1 %>%
 
 ```
 
---
 
 </br>
 
@@ -172,7 +171,6 @@ knitr::include_graphics("figures/tmstmp_lambda1.jpeg")
 ```
 ]
 
---
 
 .pull-right[
 ```{r echo=FALSE, fig.retina=3}
