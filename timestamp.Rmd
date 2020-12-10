@@ -1,10 +1,4 @@
-count: false
 
-class: center, middle
-
-### A good test of a model is its versatility in explaining multiple datasets generated in diverse experimental settings.
-
----
 class: inverse
 background-image: url("figures/inverse_bg.png")
 
@@ -20,6 +14,11 @@ knitr::include_graphics("figures/timestamp_paper.png")
 </br>
 
 ???
+count: false
+
+class: center, middle
+
+### A good test of a model is its versatility in explaining multiple datasets generated in diverse experimental settings.
 
 <p style="color:navy;">A good test of a model is its versatility in explaining multiple datasets generated in diverse experimental settings.</p>
 
@@ -77,15 +76,30 @@ $$
 \end{aligned}
 $$
 ]
-where $\small \lambda = \delta - \rho  \quad \rightarrow$ net loss rate.
+where, $\small \lambda = \delta - \rho  \quad \rightarrow$ net loss rate.
 
 --
 
 </br>
 
-The solution of this PDE $\small \Rightarrow f(t, N_0, \lambda)$,
-- $\small N_0$ - the initial counts of timestamped cells at time 0. 
-- $\small \lambda$ - net rate of loss &mdash; varies with cell age.
+</br>
+
+We can define the model as,
+
+.shadedbox2[
+$$
+\small
+\begin{aligned}
+&y_i \sim \text{Normal}(\mu_i, \sigma) \quad \quad \quad 
+\mu_i = f(t_i, N_0, \lambda(a))\\
+\\
+&\text{where, } N_0 \text{ - the initial counts of timestamped cells at time 0.}\\
+\\
+&N_0 \sim \text{Normal}(\mu_N, \sigma_N)   \quad \quad \text{... varying intercept between cohorts/animals} \\
+&\lambda \sim \text{Normal}(\mu_{\lambda}, \sigma_{\lambda})   \quad \quad \quad \text{... varying slope between cohorts/animals}
+\end{aligned}
+$$
+]
 
 ???
 Since we have no information on cell division in this system,
@@ -93,6 +107,8 @@ ASM reduces down to a 2-dimensional PDE.
 
 - $\small \gamma$ - the rate with which $\small \lambda_0$ varies with cell-age _i.e._ 
 $\small \lambda_0 \, e^{-\gamma \,a}$. 
+
+
 ---
 <hr>
 </br>
@@ -170,8 +186,6 @@ knitr::include_graphics("figures/mouse_wise_4.png")
 
 ### Summary from the timestamp data
 <hr>
-
-- Age-structured model can explain naive T cell dynamics in diverse settings.
 
 - The hierarchical model reveals cohort-specific effects on the net loss rate $\small \lambda$ of naive T cells.
 

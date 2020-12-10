@@ -1,3 +1,21 @@
+class: middle
+
+### 1. Ontogeny dataset
+
+Total counts and proportions of $\small \text{Ki}67^{high}$ cells from d5 to d300 in mice.
+
+
+### 2. Timestamp dataset
+
+Data from a mouse system that allows us to track cohorts of naive T cells as they leave the thymus.
+
+</br>
+
+???
+
+### Our goal is to use these data together to test grand-unified models of Naive T cell homeostasis from birth to death.
+
+---
 
 ### Variation in Naive T cell pool size and cell division
 <hr>

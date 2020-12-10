@@ -75,12 +75,12 @@ background-image: url("figures/inverse_bg.png")
 
 - Thymus halves in size every ~5 months in mice.
 
+```{r echo=FALSE, fig.retina=3, out.width='75%'}
 
-```{r echo=FALSE, fig.retina=3, out.width='70%'}
-
-knitr::include_graphics("figures/intro_counts2.png")
+knitr::include_graphics("figures/sp_counts.jpg")
 ```
 
+--
 
 ### A substantial fraction of naive T cell repertoire is established early on in life.
 
@@ -283,5 +283,9 @@ knitr::include_graphics("figures/ki67_untangle.png")
 
 ???
 We haven't tried combination of one more processes - which may explain data better than the single model.
+
+
+
+
 
 
