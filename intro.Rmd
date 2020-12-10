@@ -1,4 +1,6 @@
 
+---
+
 ## .center[Naive T cells are cornerstones of adaptive immunity]
 <hr>
 

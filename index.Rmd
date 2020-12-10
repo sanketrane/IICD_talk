@@ -15,6 +15,7 @@ output:
       countIncrementalSlides: false
       #slideNumberFormat: "%current%"
 ---
+class: center, middle
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -39,6 +40,12 @@ library(xaringanthemer)
 
 ```
 
+
+
+```{r echo=FALSE, fig.retina=3}
+
+knitr::include_graphics("figures/trans_atl.png")
+```
 
 
 ```{r child='intro.Rmd'}
