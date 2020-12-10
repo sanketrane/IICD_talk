@@ -1,18 +1,21 @@
 
-
-### .center[Variation in Naive T cell pool size]
+### Variation in Naive T cell pool size and cell division
 <hr>
 
-- Counts of $\small \text{CD}44^{low} \;\; \text{CD62L}^{high}$ cells isolated from pooled lymph nodes.
 
-</br>
-
-```{r echo=FALSE}
+```{r echo=FALSE, fig.retina=3, out.width='80%'}
 
 knitr::include_graphics("figures/counts_data.jpeg")
 ```
 
----
+--
+
+```{r echo=FALSE, fig.retina=3, out.width='80%'}
+
+knitr::include_graphics("figures/ki_data.jpeg")
+```
+
+???
 
 ### .center[Measuring cell division in T lymphocytes]
 <hr>
@@ -20,56 +23,6 @@ knitr::include_graphics("figures/counts_data.jpeg")
 - $\small \text{Ki}67$ — a nuclear protein expressed during cell-division.
 
 </br>
-
-
-```{r echo=FALSE, fig.retina=3}
-
-knitr::include_graphics("figures/ki_data.jpeg")
-```
-
-
----
-class: inverse
-background-image: url("figures/inverse_bg.png")
-
-<hr>
-.pull-left[
-```{r echo=FALSE, fig.retina=3, out.width='300', fig.asp='1'}
-
-knitr::include_graphics("figures/ki67_untangle.png")
-```
-]
-.pull-right[
-</br>
-- T cells continue expressing Ki67 protein for ~ 4 days after the division.
-.right[Hogan _et. al._, PNAS 2015]
-]
-- Hard to untangle the origin of Ki67 expression within peripheral naive T cells.
-**Thymic Inheritance or division in periphery?**
-
-<hr>
---
-
-
-
-### Mathematical models
-- can track the division history of naive T cells and quantify the contributions to Ki67 expression from _thymic influx_ and _peripheral division._
-
---
-
-- can dissect the heterogeneity in **'homeostatic fitness'** among naive T cells.
-
----
-
-###  .center[Potential mechanisms of naive T cell maintenance]
-<hr>
-
-
-```{r echo=FALSE, fig.retina=3, out.width='700', out.height='470'}
-
-knitr::include_graphics("figures/model_concepts.png")
-```
-
 
 ---
 class: center
