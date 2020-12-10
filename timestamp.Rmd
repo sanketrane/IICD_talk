@@ -95,8 +95,8 @@ $$
 \\
 &\text{where, } N_0 \text{ - the initial counts of timestamped cells at time 0.}\\
 \\
-&N_0 \sim \text{Normal}(\mu_N, \sigma_N)   \quad \quad \text{... varying intercept between cohorts/animals} \\
-&\lambda \sim \text{Normal}(\mu_{\lambda}, \sigma_{\lambda})   \quad \quad \quad \text{... varying slope between cohorts/animals}
+&N_0 \sim \text{Normal}(\mu_N, \sigma_N)   \quad \quad \text{... varying the intercept between cohorts/animals} \\
+&\lambda \sim \text{Normal}(\mu_{\lambda}, \sigma_{\lambda})   \quad \quad \quad \text{... varying rate of loss between cohorts/animals}
 \end{aligned}
 $$
 ]
@@ -177,7 +177,7 @@ knitr::include_graphics("figures/tmstmp_lambda1.jpeg")
 .pull-right[
 ```{r echo=FALSE, fig.retina=3}
 
-knitr::include_graphics("figures/mouse_wise_4.png")
+knitr::include_graphics("figures/mouse_wise_4.jpg")
 ```
 ]
 
