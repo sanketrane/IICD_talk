@@ -22,42 +22,51 @@ label: unnamed-chunk-1 (with options)
 List of 1
  $ child: chr "intro.Rmd"
 
-  |                                                                              |                                                                      |   0%  |                                                                              |........                                                              |  11%
+  |                                                                              |                                                                      |   0%  |                                                                              |......                                                                |   9%
   ordinary text without R code
 
-  |                                                                              |................                                                      |  22%
+  |                                                                              |.............                                                         |  18%
 label: unnamed-chunk-5 (with options) 
+List of 2
+ $ echo      : logi FALSE
+ $ fig.retina: num 3
+
+  |                                                                              |...................                                                   |  27%
+  ordinary text without R code
+
+  |                                                                              |.........................                                             |  36%
+label: unnamed-chunk-6 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.retina: num 3
  $ out.width : chr "70%"
 
-  |                                                                              |.......................                                               |  33%
+  |                                                                              |................................                                      |  45%
   ordinary text without R code
 
-  |                                                                              |...............................                                       |  44%
-label: unnamed-chunk-6 (with options) 
+  |                                                                              |......................................                                |  55%
+label: unnamed-chunk-7 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.retina: num 3
  $ out.width : chr "75%"
 
-  |                                                                              |.......................................                               |  56%
+  |                                                                              |.............................................                         |  64%
   ordinary text without R code
 
-  |                                                                              |...............................................                       |  67%
-label: unnamed-chunk-7 (with options) 
+  |                                                                              |...................................................                   |  73%
+label: unnamed-chunk-8 (with options) 
 List of 4
  $ echo      : logi FALSE
  $ fig.retina: num 3
  $ out.width : chr "700"
  $ out.height: chr "470"
 
-  |                                                                              |......................................................                |  78%
+  |                                                                              |.........................................................             |  82%
   ordinary text without R code
 
-  |                                                                              |..............................................................        |  89%
-label: unnamed-chunk-8 (with options) 
+  |                                                                              |................................................................      |  91%
+label: unnamed-chunk-9 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -79,7 +88,7 @@ List of 1
   ordinary text without R code
 
   |                                                                              |................                                                      |  22%
-label: unnamed-chunk-9 (with options) 
+label: unnamed-chunk-10 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -89,7 +98,7 @@ List of 3
   ordinary text without R code
 
   |                                                                              |...............................                                       |  44%
-label: unnamed-chunk-10 (with options) 
+label: unnamed-chunk-11 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -99,7 +108,7 @@ List of 3
   ordinary text without R code
 
   |                                                                              |...............................................                       |  67%
-label: unnamed-chunk-11 (with options) 
+label: unnamed-chunk-12 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -109,7 +118,7 @@ List of 3
   ordinary text without R code
 
   |                                                                              |..............................................................        |  89%
-label: unnamed-chunk-12 (with options) 
+label: unnamed-chunk-13 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -131,7 +140,7 @@ List of 1
   ordinary text without R code
 
   |                                                                              |.....                                                                 |   6%
-label: unnamed-chunk-13 (with options) 
+label: unnamed-chunk-14 (with options) 
 List of 2
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -140,7 +149,7 @@ List of 2
   ordinary text without R code
 
   |                                                                              |.........                                                             |  13%
-label: unnamed-chunk-14 (with options) 
+label: unnamed-chunk-15 (with options) 
 List of 2
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -149,7 +158,7 @@ List of 2
   ordinary text without R code
 
   |                                                                              |..............                                                        |  19%
-label: unnamed-chunk-15 (with options) 
+label: unnamed-chunk-16 (with options) 
 List of 2
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -158,7 +167,7 @@ List of 2
   ordinary text without R code
 
   |                                                                              |..................                                                    |  26%
-label: unnamed-chunk-16 (with options) 
+label: unnamed-chunk-17 (with options) 
 List of 2
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -167,7 +176,7 @@ List of 2
   ordinary text without R code
 
   |                                                                              |.......................                                               |  32%
-label: unnamed-chunk-17 (with options) 
+label: unnamed-chunk-18 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -177,7 +186,7 @@ List of 3
   ordinary text without R code
 
   |                                                                              |...........................                                           |  39%
-label: unnamed-chunk-18 (with options) 
+label: unnamed-chunk-19 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -187,7 +196,7 @@ List of 3
   ordinary text without R code
 
   |                                                                              |................................                                      |  45%
-label: unnamed-chunk-19 (with options) 
+label: unnamed-chunk-20 (with options) 
 List of 2
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -196,7 +205,7 @@ List of 2
   ordinary text without R code
 
   |                                                                              |....................................                                  |  52%
-label: unnamed-chunk-20 (with options) 
+label: unnamed-chunk-21 (with options) 
 List of 2
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -205,7 +214,7 @@ List of 2
   ordinary text without R code
 
   |                                                                              |.........................................                             |  58%
-label: unnamed-chunk-21 (with options) 
+label: unnamed-chunk-22 (with options) 
 List of 2
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -214,7 +223,7 @@ List of 2
   ordinary text without R code
 
   |                                                                              |.............................................                         |  65%
-label: unnamed-chunk-22 (with options) 
+label: unnamed-chunk-23 (with options) 
 List of 2
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -223,7 +232,7 @@ List of 2
   ordinary text without R code
 
   |                                                                              |..................................................                    |  71%
-label: unnamed-chunk-23 (with options) 
+label: unnamed-chunk-24 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -233,7 +242,7 @@ List of 3
   ordinary text without R code
 
   |                                                                              |......................................................                |  77%
-label: unnamed-chunk-24 (with options) 
+label: unnamed-chunk-25 (with options) 
 List of 2
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -242,7 +251,7 @@ List of 2
   ordinary text without R code
 
   |                                                                              |...........................................................           |  84%
-label: unnamed-chunk-25 (with options) 
+label: unnamed-chunk-26 (with options) 
 List of 2
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -251,7 +260,7 @@ List of 2
   ordinary text without R code
 
   |                                                                              |...............................................................       |  90%
-label: unnamed-chunk-26 (with options) 
+label: unnamed-chunk-27 (with options) 
 List of 2
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -260,7 +269,7 @@ List of 2
   ordinary text without R code
 
   |                                                                              |....................................................................  |  97%
-label: unnamed-chunk-27 (with options) 
+label: unnamed-chunk-28 (with options) 
 List of 2
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -281,7 +290,7 @@ List of 1
   ordinary text without R code
 
   |                                                                              |........                                                              |  12%
-label: unnamed-chunk-28 (with options) 
+label: unnamed-chunk-29 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -291,7 +300,7 @@ List of 3
   ordinary text without R code
 
   |                                                                              |................                                                      |  24%
-label: unnamed-chunk-29 (with options) 
+label: unnamed-chunk-30 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -301,7 +310,7 @@ List of 3
   ordinary text without R code
 
   |                                                                              |.........................                                             |  35%
-label: unnamed-chunk-30 (with options) 
+label: unnamed-chunk-31 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -311,7 +320,7 @@ List of 3
   ordinary text without R code
 
   |                                                                              |.................................                                     |  47%
-label: unnamed-chunk-31 (with options) 
+label: unnamed-chunk-32 (with options) 
 List of 2
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -320,7 +329,7 @@ List of 2
   ordinary text without R code
 
   |                                                                              |.........................................                             |  59%
-label: unnamed-chunk-32 (with options) 
+label: unnamed-chunk-33 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -330,7 +339,7 @@ List of 3
   ordinary text without R code
 
   |                                                                              |.................................................                     |  71%
-label: unnamed-chunk-33 (with options) 
+label: unnamed-chunk-34 (with options) 
 List of 2
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -339,7 +348,7 @@ List of 2
   ordinary text without R code
 
   |                                                                              |..........................................................            |  82%
-label: unnamed-chunk-34 (with options) 
+label: unnamed-chunk-35 (with options) 
 List of 3
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -349,7 +358,7 @@ List of 3
   ordinary text without R code
 
   |                                                                              |..................................................................    |  94%
-label: unnamed-chunk-35 (with options) 
+label: unnamed-chunk-36 (with options) 
 List of 2
  $ echo      : logi FALSE
  $ fig.retina: num 3
@@ -362,4 +371,4 @@ List of 2
   ordinary text without R code
 
 
-/Applications/RStudio.app/Contents/MacOS/pandoc/pandoc +RTS -K512m -RTS index.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output index.html --lua-filter /Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --email-obfuscation none -V 'mathjax-url=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML' -V 'title-slide-class=center, middle, inverse, title-slide' --standalone --section-divs --template /Library/Frameworks/R.framework/Versions/4.0/Resources/library/xaringan/rmarkdown/templates/xaringan/resources/default.html --no-highlight --css My-xaringan-themer.css --css xaringan-custom.css --include-in-header /var/folders/w9/nrh3kr0x6sx3_3c6gg9pk0fc0000gn/T//RtmpbpHqCF/rmarkdown-str386c5ee5aa89.html --include-before-body /var/folders/w9/nrh3kr0x6sx3_3c6gg9pk0fc0000gn/T//RtmpbpHqCF/xaringan386c28416bf6.md --include-after-body /var/folders/w9/nrh3kr0x6sx3_3c6gg9pk0fc0000gn/T//RtmpbpHqCF/xaringan386c3bd71f33.js --variable title-slide=true --variable math=true 
+/Applications/RStudio.app/Contents/MacOS/pandoc/pandoc +RTS -K512m -RTS index.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output index.html --lua-filter /Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --email-obfuscation none -V 'mathjax-url=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML' -V 'title-slide-class=center, middle, inverse, title-slide' --standalone --section-divs --template /Library/Frameworks/R.framework/Versions/4.0/Resources/library/xaringan/rmarkdown/templates/xaringan/resources/default.html --no-highlight --css My-xaringan-themer.css --css xaringan-custom.css --include-in-header /var/folders/w9/nrh3kr0x6sx3_3c6gg9pk0fc0000gn/T//RtmpVtDl5z/rmarkdown-str3ed5424d06d0.html --include-before-body /var/folders/w9/nrh3kr0x6sx3_3c6gg9pk0fc0000gn/T//RtmpVtDl5z/xaringan3ed53e75db13.md --include-after-body /var/folders/w9/nrh3kr0x6sx3_3c6gg9pk0fc0000gn/T//RtmpVtDl5z/xaringan3ed5cca6fdc.js --variable title-slide=true --variable math=true 
