@@ -76,30 +76,40 @@ $$
 \end{aligned}
 $$
 ]
-where, net loss rate $\small \rightarrow \lambda = \delta - \rho  \quad \Rightarrow \quad \quad \lambda(a) = \lambda_0 \, e^{-\gamma \, a}$
 
+where, net loss rate $\small \rightarrow \lambda = \delta - \rho$
+<span style="color:#035AA6;">
+$\quad \Rightarrow \quad \quad \small  \lambda(a) = \lambda_0 \, e^{-\gamma \, a}$
+</span>
+
+<hr>
 --
 
-</br>
+### <u>Model:</u>
 
-</br>
-
-We define the model as,
-
-.shadedbox2[
 $$
 \small
 \begin{aligned}
-&y_i \sim \text{Normal}(\mu_i, \sigma) \quad \quad \quad 
-\mu_i = f(t_i, N_0, \lambda(a))\\
-\\
-&\text{where, } N_0 \text{ - the initial counts of timestamped cells at time 0.}\\
-\\
-&N_0 \sim \text{Normal}(\mu_N, \sigma_N)   \quad \quad \text{... varying the intercept between cohorts/animals} \\
-&\lambda_0 \sim \text{Normal}(\mu_{\lambda}, \sigma_{\lambda})   \quad \quad \quad \text{... varying rate of loss between cohorts/animals}
+&y_i \sim \text{normal}(\mu_i, \sigma) \quad \quad \quad \quad \quad \quad  &[\text{likelihood}] \\
+&\mu_i = f(\text{time}_i, N_0, \lambda_0, \gamma)  &[\text{model}]\\
+&\gamma \sim \text{normal}(0.05, 0.01) &[\gamma \text{ prior}]
 \end{aligned}
 $$
-]
+
+
+
+<span style="color:#035AA6;">
+$$
+\small
+\begin{aligned}
+&\text{Hyper parameters} \\
+&N_0 \sim \text{normal}(\mu_N, \sigma_N) \quad \quad \quad  &[\text{Initial counts}]  \\
+&\lambda_0 \sim \text{normal}(\mu_{\lambda}, \sigma_{\lambda})   &[\text{Loss rate at age=0}] 
+\end{aligned}
+$$
+</span>
+
+<hr>
 
 ???
 Since we have no information on cell division in this system,
@@ -162,15 +172,22 @@ background-image: url("figures/inverse_bg.png")
 knitr::include_graphics("figures/tmstmp_N0.jpeg")
 ```
 
---
+---
 
 .pull-left[
-```{r echo=FALSE, fig.retina=3, out.width='250'}
+```{r echo=FALSE, fig.retina=3, out.width='90%'}
 
-knitr::include_graphics("figures/tmstmp_lambda1.jpeg")
+knitr::include_graphics("figures/lambda_var_cohorts.jpeg")
 ```
 ]
 
+.pull-right[
+```{r echo=FALSE, fig.retina=3, out.width='90%'}
+
+knitr::include_graphics("figures/lambda_var_HA.jpeg")
+```
+]
+---
 
 .pull-right[
 ```{r echo=FALSE, fig.retina=3}
@@ -199,6 +216,13 @@ knitr::include_graphics("figures/mouse_wise_4.jpg")
 - Include host-age dependence in ASM and refit on the ontogeny data.
 
 
+---
+
+
+```{r echo=FALSE, fig.retina=3}
+
+knitr::include_graphics("figures/trans_atl.png")
+```
 ---
 
 class: center, middle

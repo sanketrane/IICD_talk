@@ -23,7 +23,7 @@ models_list1 <- c('Neutral', 'LIP', 'Density-dependent loss')
 looic_cd4_loolist1 <- c(132.9, 134.5, 127.7)
 cd4_table1 <- model_compare(models_list1, looic_cd4_loolist1)
 cd4_table1 %>%
-   kable(caption = "Statistical analysis for CD4 data") %>%
+   kable(caption = "Table: Statistical analysis for CD4 data") %>%
   kable_styling(font_size = 15) %>%
   row_spec(which(cd4_table1$ΔLooIC == 0), bold = T, color = "navy", background = "skyblue")
 
@@ -32,7 +32,7 @@ cd4_table1 %>%
 
 ```{r echo=FALSE, fig.retina=3}
 
-knitr::include_graphics("figures/cd4_compare1.png")
+knitr::include_graphics("figures/cd4_compare1.jpeg")
 ```
 
 
@@ -47,7 +47,7 @@ class: center
 looic_cd8_loolist1 <- c(153.0943, 139.9556, 145.4329)
 cd8_table1 <- model_compare(models_list1, looic_cd8_loolist1)
 cd8_table1 %>%
-  kable(caption = "Statistical analysis for CD8 data") %>%
+  kable(caption = "Table: Statistical analysis for CD8 data") %>%
   kable_styling(font_size = 15) %>%
   row_spec(which(cd8_table1$ΔLooIC == 0), bold = T, color = "navy", background = "skyblue")
 
@@ -56,7 +56,7 @@ cd8_table1 %>%
 
 ```{r echo=FALSE, fig.retina=3}
 
-knitr::include_graphics("figures/cd8_compare1.png")
+knitr::include_graphics("figures/cd8_compare1.jpeg")
 ```
 
 
@@ -93,7 +93,7 @@ models_list2 <- c('Neutral', 'LIP', 'Density-dependent loss', "RTE", "RTE matura
 looic_cd4_loolist2 <- c(132.9, 134.5, 127.7, 134.57, 131.43)
 cd4_table2 <- model_compare(models_list2, looic_cd4_loolist2)
 cd4_table2 %>%
-  kable(caption = "Statistical analysis for CD4 data") %>%
+  kable(caption = "Table: Statistical analysis for CD4 data") %>%
   kable_styling(font_size = 15) %>%
   row_spec(which(cd4_table2$ΔLooIC <= 3), bold = T, color = "navy", background = "skyblue")
 
@@ -102,7 +102,7 @@ cd4_table2 %>%
 
 ```{r echo=FALSE, fig.retina=3}
 
-knitr::include_graphics("figures/cd4_compare2.png")
+knitr::include_graphics("figures/cd4_compare2.jpeg")
 ```
 
 ---
@@ -115,7 +115,7 @@ class: center
 looic_cd8_loolist2<- c(153.0943, 139.9556, 145.4329, 151.7188, 154.3836)
 cd8_table2 <- model_compare(models_list2, looic_cd8_loolist2)
 cd8_table2 %>%
-  kable(caption = "Statistical analysis for CD8 data") %>%
+  kable(caption = "Table: Statistical analysis for CD8 data") %>%
   kable_styling(font_size = 15) %>%
   row_spec(which(cd8_table2$ΔLooIC <= 3), bold = T, color = "navy", background = "skyblue")
 
@@ -124,7 +124,7 @@ cd8_table2 %>%
 
 ```{r echo=FALSE, fig.retina=3}
 
-knitr::include_graphics("figures/cd8_compare2.png")
+knitr::include_graphics("figures/cd8_compare2.jpeg")
 ```
 
 
@@ -167,7 +167,7 @@ models_list3 <- c('Neutral', 'LIP', 'Density-dependent loss', "RTE",
 looic_cd4_loolist3 <- c(132.9, 134.5, 127.7, 134.57, 131.43, 133.6814, 129.8941)
 cd4_table3 <- model_compare(models_list3, looic_cd4_loolist3)
 cd4_table3 %>%
-   kable(caption = "Statistical analysis for CD4 data") %>%
+   kable(caption = "Table: Statistical analysis for CD4 data") %>%
   kable_styling(font_size = 15) %>%
   row_spec(which(cd4_table3$ΔLooIC <= 3), bold = T, color = "navy", background = "skyblue")
 
@@ -176,7 +176,7 @@ cd4_table3 %>%
 
 ```{r echo=FALSE, fig.retina=3}
 
-knitr::include_graphics("figures/cd4_compare3.png")
+knitr::include_graphics("figures/cd4_compare3.jpeg")
 ```
 
 
@@ -189,7 +189,7 @@ class: center
 looic_cd8_loolist3<- c(153.0943, 139.9556, 145.4329, 151.7188, 154.3836, 142.0947, 152.1801)
 cd8_table3 <- model_compare(models_list3, looic_cd8_loolist3)
 cd8_table3 %>%
-   kable(caption = "Statistical analysis for CD8 data") %>%
+   kable(caption = "Table: Statistical analysis for CD8 data") %>%
   kable_styling(font_size = 15) %>%
   row_spec(which(cd8_table3$ΔLooIC <= 3), bold = T, color = "navy", background = "skyblue")
 
@@ -198,7 +198,7 @@ cd8_table3 %>%
 
 ```{r echo=FALSE, fig.retina=3}
 
-knitr::include_graphics("figures/cd8_compare3.png")
+knitr::include_graphics("figures/cd8_compare3.jpeg")
 ```
 
 ---

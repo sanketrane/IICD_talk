@@ -24,8 +24,10 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE,
   fig.align = "center", out.width = "100%", cache = FALSE)
 library(tidyverse)
 library(knitr)
-library(formattable)
 ```
+
+
+
 
 
 ```{r xaringan-themer, include=FALSE}
@@ -42,16 +44,11 @@ library(xaringanthemer)
 
 
 
-```{r echo=FALSE, fig.retina=3}
-
-knitr::include_graphics("figures/trans_atl.png")
-```
-
-
 ```{r child='intro.Rmd'}
 ```
 
 ---
+
 
 ```{r child='data_ontogeny.Rmd'}
 ```
@@ -66,14 +63,6 @@ knitr::include_graphics("figures/trans_atl.png")
 
 ```{r child='timestamp.Rmd'}
 ```
-
-
-
-
-
-
-
-
 
 
 

@@ -1,17 +1,93 @@
 
----
+class: inverse
+background-image: url("figures/inverse_bg.png")
 
+## .center[The Emperor and the Golem]
+<hr>
+
+.pull-left[
+<figure>
+  <img src="figures/king2.jpg" style="width:90%">
+</figure>
+]
+
+--
+
+<figure>
+  <img src="figures/golem1.png" style="width:40%">
+</figure>
+
+--
+
+- <h3 style="color:#fcba03; font-size:150%"> Specifically identify and destroy 'foreign'. </h3>
+  <p style="color:gray50; font-size:80%"> &#8594; Large army for countless possibilities.</p>
+
+
+--
+
+- <h3 style="color:#fcba03; font-size:150%"> Recognize our own.  </h3>
+  <p style="color:gray50; font-size:80%"> &#8594; Remove that pose threat to 'self'.</p>
+
+--
+
+- <h3 style="color:#fcba03; font-size:150%"> Remember and respond faster next time.</h3>
+
+---
+class: inverse, center, middle
+background-image: url("figures/inverse_bg.png")
+
+## .center[The Golems of our immune system]
+
+```{r echo=FALSE, fig.retina=3}
+
+knitr::include_graphics("figures/intro_diversity1.png")
+```
+
+---
+### .center[Subset composition of T cells]
+<hr>
+
+T cells are primarily categorized into $\small \text{CD4}^+  \text{ and CD8}^+$ cells.
+
+
+```{r echo=FALSE, fig.retina=3}
+
+knitr::include_graphics("figures/naive_composition.jpg")
+```
+
+--
+
+</br>
+
+<h2 style="color:#9e423c; font-size:200%">.center[Naive T cells make up a large fraction of these subsets.] </h2>
+
+
+???
+
+---
+class: center
 ## .center[Naive T cells are cornerstones of adaptive immunity]
 <hr>
 
-### First rule of the immune system &mdash;  **Fight and remember.**</br>
-
-
-.center[
-<figure>
-  <img src="figures/F1_naive.png" style="width:60%">
-</figure>
+.left[
+### * Naive T lymphocytes -- 
+  - Identify 'specific antigens' on pathogens and tumors.
+  - Continuously circulate within lymphatic system in search of antigens.
+  - Differentiate into memory and effector T cells.
 ]
+--
+
+</br>
+
+<h3> Naive T cells play a central role in fights against novel and mutating pathogens.</h3>
+
+--
+
+<big><big><big><big> <big>	<span style="color:#9e423c;">&#11015;</span>  </big></big></big></big></big>
+
+<h3 style="color:#9e423c;">
+A broad and long-lasting naive repertoire is crucial to protect against new infections throughout our lifetime.
+</h3>
 
 ???
 Unlike the very popular fictional club of men who like to fight and not talk about it
@@ -22,49 +98,41 @@ and at the center of it all are naive T cells... which carry a unique receptor o
 Our bodies carry a vast array of naive T cells with different specificities to fight a wide range of novel and mutating pathogens. 
 
 
---
+There are two types of T cells ones that express CD4 conventionally knows and Thelper cells and the others express cd8 protein -- cytotoxic/killer T cells.
 
-</br>
-
-### A broad and long-lasting repertoire is crucial to protect against new infections throughout our lifetime.
-
-???
 Maintaining the size and breadth of naive T cell repertoire is paramount in protecting us against new infections throughout our lifetime.
 
----
-class: middle
-<hr>
-
-- T cells are primarily categorized into $\small \text{CD4}^+  \text{ and CD8}^+$ cells depending on their co-receptor expression
-
-- Naive T cells make up a large fraction of both CD4 and CD8 T cells.
-
-</br>
-
-
-```{r echo=FALSE, fig.retina=3}
-
-knitr::include_graphics("figures/naive_composition.jpg")
-```
-
-<hr>
-
-???
 I will focus on the mechanisms that maintain the naive cd4 and cd8 T cell numbers and their repertoires in this talk.  
 
 ---
 
-## Ecology of T lymphocytes
+### Complexity & Dynamism in naive T cell homeostasis:
 <hr>
 
-```{r echo=FALSE, fig.retina=3, out.width='70%'}
+```{r echo=FALSE, fig.retina=3, out.width='50%'}
 
-knitr::include_graphics("figures/intro_slide.png")
+knitr::include_graphics("figures/ecology.png")
 ```
 
 
-### Naive T cell repertoire is shaped by **influx** from the thymus, and by **population dynamics** of naive T cells in peripheral lymphoid organs.
+--
 
+> Multiple processes regulate the numbers and diversity of naive T cells.
+
+> Contribution of these processes to naive T cell maintenance may vary with time.
+
+--
+
+</br>
+
+.center[
+<h3 style="color:#9e423c;">
+Understanding the development and maintenance of our T cell repertoires requires quantifying their ecology.
+
+</h3>
+]
+
+<hr>
 
 ???
 - 100% of the diversity generation happens in the thymus - a small gland in our chest.
@@ -74,7 +142,7 @@ naive cd4 and cd8 T cells emerge from thymic SP4 and SP8 subsets respectively.
 
 - The clonal diversity and numbers of peripheral naive t cells are maintained by an aggregate effect of death, division and differentiation processes.
 
-- In many ways it is an ecosystem - and understanding the development and maintenance of our immune repertoires requires quantifying this ecology.
+- In many ways it is an ecosystem - We need to quantify T cell ecology to understand the development and maintenance of our immune repertoires.
 
 
 <!---
@@ -83,73 +151,116 @@ There is some evidence in the field that the dynamics of RTE are different than 
 -->
 ---
 name: naivedynamics-slide
-class: inverse
-background-image: url("figures/inverse_bg.png")
-
-## .center[Dynamics in early life]
+## Influx into the naive pool
 <hr>
 
-### Thymic involution
-- Thymus (a small gland in chest) starts shrinking from around 8 weeks of age in mice and from puberty in humans.
+* Thymic involution: 
+     > Thymus starts shrinking from around 8 weeks of age in mice (halves in size every ~5 months) and from puberty in humans.
 
-- Thymus halves in size every ~5 months in mice.
+</br>
 
-```{r echo=FALSE, fig.retina=3, out.width='75%'}
+.pull-left[
+```{r echo=FALSE, fig.retina=3, out.width='68%'}
 
-knitr::include_graphics("figures/sp_counts.jpg")
+knitr::include_graphics("figures/Daily_influx.png")
 ```
+]
+
+--
+
+</br>
+
+<h3 style="font-size:140%;">
+&#8658; Fewer and fewer new cells enter the naive compartment.
+</h3>
+
+--
+
+<h3 style="font-size:140%;">
+&#8658; Diminished inflow of new specificities.
+</h3>
+
+--
+
+</br>
+</br>
+
+.center[
+<h3 style="color:#9e423c;">
+Thymic involution strongly impacts naive T cell numbers and repertoire diversity.
+</h3>
+]
 
 ???
-
 - There is a sharp increase in thymic cellularity early on in life but it starts shrinking starts shrinking from adulthood onwards &mdash; around 8 weeks of age in mice and from puberty in humans.
 
 - Consequently SP4 and SP8 counts start falling.
 
 - Since SP counts are proxy for thymic output/ new naive TCR production we can assume that most of the naive T cell repertoire gets established very early on in life and is just maintained throughout our lifetimes.
 
-
---
-
-### A substantial fraction of naive T cell repertoire is established early on in life.
-
-
-???
+The influx of new specificities into the naive pool diminishes significantly after thymic involution.
 
 - This effect is probably even more extreme in humans, as thymus basically dries up by age 40
 
-
 ---
 
-##  .center[Big questions]
+## Big Questions
 <hr>
 
-### What are the dynamics of naive T cell repertoire development?
-- Is there clonal proliferation in periphery $\rightarrow$ forming large families?</br>
-&#8618; Skews clone size distribution and lowers diversity.
-- Is it all new specificities from the thymus? </br>
-&#8618;Boosts diversity.
+--
+
+<h3>
+&#128161; Is the majority of T cell repertoire established early on in life (pre-involution)?
+</h3> 
 
 --
 
-###  What are the rules of replacement within naive pool? 
-- How do recent thymic immigrants fare against established naive T cells? </br>
-&#8618; Maintenance of diversity over lifetime.
-
-???
-Are the new immigrants at an advantage or disadvantage relative to established naive T cells?
-This has consequences on how diversity in maintained over lifetime.
-
---
-
-### How are naive T cells maintained after thymic involution?
-- Quorum sensing in naive T cell homeostasis to preserve the numbers?</br>
-&#8618; Compensatory increase in cell division or decrease in turnover or both?
-
-
-???
-Is there Compensatory increase in cell division? or decrease in their loss? or both? 
+<h3>
+&#128161; What are the dynamics of its establishment?
+</h3> 
+   - Is there clonal proliferation in periphery $\rightarrow$ forming large clonal families?</br>
+   &#8618; **Skews clone size distribution and lowers diversity.**
+   - Is it all new specificities from the thymus? </br>
+   &#8618; **Enhances diversity.**
 
 ---
+<hr>
+<h3>
+&#128161; How are naive T cells maintained after thymic involution?
+</h3> 
+
+- **Quorum sensing** to preserve the numbers? </br>
+&#8618; Compensatory increase in cell division or decrease in turnover or both?
+
+--
+
+<h3 style="color:#9e423c;">
+&#8658; Can this explain the collapse in repertoire diversity in old ages?
+</h3>
+
+--
+
+</br>
+
+### &#128161; What are the rules of replacement within naive pool? 
+- Is it purely stochastic?
+
+--
+
+- Do new immigrants displace pre-existing cells? 
+
+- Homeostatic advantage for relatively older cells?
+
+--
+
+<h3 style="color:#9e423c;">
+&#8658; Consequences on how diversity in maintained over lifetime.
+</h3>
+
+<hr>
+
+---
+
 ## What we know and don’t know
 <hr>
 
@@ -160,12 +271,28 @@ Most of our understanding of naive T cell homeostasis comes from studies in adul
 
 ### 1. Heterogeneity in naive T cell pool </br>
 &#8594; We have shown that naive T cells' ability to persist in the circulation increases with their cell-age **(first-in-last-out rule).** 
-- Shown in diverse experimental settings in adult mice. .right[Hogan _et. al._, PNAS 2015. Rane _et. al._ Plos Bio 2018].
-</br>
-- With the use of $C^{14}$ dating in humans (age: 20-65 years). .right[Mold _et. al._ Plos Bio 2019]
-</br>
+- Shown in diverse experimental settings in adult mice.
+.right[
+<span style="color:#606060; font-weight:900; font-size:90%;"> 
+Hogan _et. al._, PNAS 2015. Rane _et. al._ Plos Bio 2018
+</span>
+]
 
-### Can cell-age dependence explain naive T cell development in neonatal niches?
+
+</br>
+- With the use of $C^{14}$ dating in humans (age: 20-65 years).
+
+.right[
+<span style="color:#606060; font-weight:900; font-size:90%;"> 
+Mold _et. al._ Plos Bio 2019
+</span>
+]
+
+--
+
+<h3 style="color:#9e423c;">
+Can cell-age dependence explain naive T cell development in neonatal niches?
+</h3>
 
 ???
 Previously, we have shown that the persistence of naive T cells i.e. their net growth in both mice and humans increases gradually with their cell-age.
@@ -180,12 +307,19 @@ Also, we haven't tested this theory on naive T cells dynamics in neonates and ar
 
 ### 2. Quorum sensing in naive T cell pool </br>
 - Naive T cells have shown to undergo rapid division in profoundly lymphopenic conditions (>90% depletion). 
-.right[Bourgeois and Stockinger, JI 2006]
-</br>
+
+.right[
+<span style="color:#606060; font-weight:900; font-size:90%;"> Bourgeois and Stockinger, JI 2006 </span>
+]
+
 &#8618;
 Reduced competition for resources (IL-7 and self-MHC derived tonic signals).
 
-- Does it manifest under normal conditions early in life? Is there reduced competition in neonates?
+- Does it manifest under normal conditions early in life?
+
+- Is there reduced competition in neonates?
+
+--
 
 ???
 - There is an evidence for lymphopenia induced proliferation when naive T cell compartment is deplated > 90%.
@@ -202,8 +336,9 @@ Probably because of reduced competition for cytokine and MHC derived tonic signa
 
 - No kinetic heterogeneity within naive CD8 T cell pool.
 
-.right[van Hoeven Front. Imm. 2017]
-
+.right[
+<span style="color:#606060; font-weight:900; font-size:90%;"> van Hoeven Front. Imm. 2017 </span>
+]
 
 ???
 RTE are hard to identify within the naive pool. Analysis of gfp labeling of thymic export and thymic transplants have shown that ...
@@ -211,24 +346,37 @@ RTE are hard to identify within the naive pool. Analysis of gfp labeling of thym
 <hr>
 
 ---
+class: inverse
+background-image: url("figures/inverse_bg.png")
+
 ## .center[A unified model of naive T cell life-histories]
 <hr>
 
 ### A single model that explains it all &mdash;  </br> 
 
+<h3 style="color:#fcba03; font-size:150%;">
+&#8658; Dynamism in neonates and stability in adults. 
+</h3>
 
-- Dynamism in neonates and stability in adults. 
+--
 
+<h3 style="color:#fcba03; font-size:150%;">
+&#8658; How and why does our immunity wanes with age?
+</h3>
 
-- How and why immunity wanes in elderly?
+--
 
+<h3 style="color:#fcba03; font-size:150%;">
+&#8658; Evolution of CD4 and CD8 repertoires and differences between them.
+</h3>
+  - More skewing in CD8 repertoires than in CD4 repertoires.
 
-- Evolution of CD4 and CD8 repertoires and differences between them.</br>
-&#8618; More skewing in CD8 repertoires than in CD4 repertoires.
+--
 
-
-- Prediction of T cell recovery upon depletion.</br>
-&#8618; Reconstitution in HSC Transplants and in HIV patients.
+<h3 style="color:#fcba03; font-size:150%;">
+&#8658; Prediction of T cell recovery upon depletion.
+</h3>
+  - Reconstitution in HSC Transplants and in HIV patients.
 
 
 ???
@@ -254,13 +402,13 @@ Also knowledge of thse mechanisms will definitly help us to understand how T cel
 ---
 
 
-###  .center[Potential mechanisms of naive T cell maintenance]
+##  .center[Potential mechanisms of naive T cell maintenance]
 <hr>
 
 
-```{r echo=FALSE, fig.retina=3, out.width='700', out.height='470'}
+```{r echo=FALSE, fig.retina=3, out.width='85%'}
 
-knitr::include_graphics("figures/model_concepts.png")
+knitr::include_graphics("figures/model_concepts.jpg")
 ```
 
 
@@ -277,27 +425,87 @@ Mechanisms of naive T cell homeostasis fall into these 4 broad categories -
 
 
 ---
-class: inverse
-background-image: url("figures/inverse_bg.png")
 
+## Story so far...
 <hr>
 
-- The adaptation model captured the naive T cell dynamics studied across multiple datasets generated in diverse experimental setups in adult mice.</br>
-&#8618; Rest of the models in isolation failed with one ore more datasets.
+</br>
+
+```{css, echo = FALSE}
+caption {
+      color: #035AA6;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+```
+
+```{r echo=FALSE, fig.retina=3}
+## function for exporting a data table of delta loo ic values and akaike weights
+#takes 2 separate lists of the name of the models and loo-ic values
+library(kableExtra)
+
+data_vec <- c("Cell counts in Wild Type mice",
+              "Cell counts in Thymectomised mice",
+              "Donor fractions in Busulfan BM chimeras",
+              "Kinetics of adoptively transferred cells")
+
+df <- data.frame(
+  "Dataset" = data_vec,
+  "Neutral" = c("\u2713", "\u2717", "\u2717", "\u2014"),
+  "Competition" = c("\u2713", "\u2713", "\u2717", "\u2014"),
+  "Selection" = c("\u2713", "\u2713", "\u2713", "\u2717"),
+  "Adaptation" = c("\u2713", "\u2713", "\u2713", "\u2713")
+)
+
+df %>%
+  kable(caption = "Table: Summary of previous results", align = c('l', rep('c', 4))) %>%
+  kable_styling(font_size = 15) %>%
+  column_spec(5, color =  'green', bold = TRUE)
+
+```
+
+.right[
+<span style="color:#606060; font-weight:900; font-size:90%;"> Rane _et. al._ Plos Bio 2018 </span>
+]
+
+
+  - The adaptation model captured the naive T cell dynamics across **multiple datasets** generated in **diverse experimental setups** in adult mice.
+  
+  - Rest of the models when tested in isolation failed with one or more datasets.
+
+--
+
+.center[
+### Different combinations of models?
+]
+
+.right[continued...]
 
 ???
+- The adaptation model captured the naive T cell dynamics studied across multiple datasets generated in diverse experimental setups in adult mice.</br>
+&#8618; Rest of the models in isolation failed with one or more datasets.
+
 Previously I had tested these models and only adaptation could multiple datasets generated across  diverse experimental setups by itself. in isolation rest all failed one ore more datasets.
 
 However, we haven't ruled out the possibility that these models may be acting in conjunction to regulate naive T cell homeostasis.
 
---
+Different mechanisms may act in conjunction to regulate naive T cell homeostasis.
 
-- In previous studies, we modeled the **Net Growth (division - loss)** rate of naive T cells.</br>
-&#8618; Untangling division and loss is crucial for understanding repertoire dynamics.
+---
+
+<h3 style="font-size:140%;">
+Untangling division and loss:
+</h3> 
+
+- Previous studies estimated **Net Growth (division - loss)** rate of naive T cells.</br>
+<h3 style="font-size:120%;">
+&#8658; Separating the effects of division and loss is crucial for studying lymphocyte dynamics.
+</h3> 
+.right[
+<span style="color:#606060; font-weight:900; font-size:90%;"> Verheijen & Rane _et. al._ Cell Reports 2020</span>
+]
  
 --
-
-</br>
 
 - $\small \text{Ki}67$ — a nuclear protein expressed during cell-division.</br>
 &#8618; Independent handle on the rate of cell division.
@@ -314,18 +522,21 @@ knitr::include_graphics("figures/ki67_untangle.png")
 .pull-right[
 </br>
 - T cells continue expressing Ki67 protein for ~ 4 days after the division.
-.right[Hogan _et. al._, PNAS 2015]
+.right[
+<span style="color:#606060; font-weight:900; font-size:90%;"> Hogan _et. al._, PNAS 2015</span>
+]
 
 **Thymic Inheritance or division in periphery?**
 ]
 
 --
 
-</br>
 
-- Modeling **‘division history’** is crucial for understanding B cell development.
-
-.right[Verheijen _et. al._ Cell Reports 2020]
+.center[
+<h3 style="color:#9e423c;">
+Modeling division-history is crucial for understanding how repertoires evolve.
+</h3> 
+]
 
 <hr>
 
