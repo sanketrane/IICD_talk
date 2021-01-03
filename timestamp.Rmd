@@ -162,17 +162,27 @@ knitr::include_graphics("figures/tmstmp_fit.jpeg")
 <hr>
 
 ---
-class: inverse
+class: inverse, center
 background-image: url("figures/inverse_bg.png")
 
+### Variation in the initial counts
 <hr>
+
+</br>
 
 ```{r echo=FALSE, fig.retina=3}
 
 knitr::include_graphics("figures/tmstmp_N0.jpeg")
 ```
 
+--
+
+##  Substantial variation within each cohort 
+
 ---
+
+### Variation in the net loss rate
+<hr>
 
 .pull-left[
 ```{r echo=FALSE, fig.retina=3, out.width='90%'}
@@ -181,40 +191,77 @@ knitr::include_graphics("figures/lambda_var_cohorts.jpeg")
 ```
 ]
 
+--
 .pull-right[
 ```{r echo=FALSE, fig.retina=3, out.width='90%'}
 
-knitr::include_graphics("figures/lambda_var_HA.jpeg")
+knitr::include_graphics("figures/lambda_varHA.jpeg")
 ```
 ]
----
-
-.pull-right[
-```{r echo=FALSE, fig.retina=3}
-
-knitr::include_graphics("figures/mouse_wise_4.jpg")
-```
-]
-
-<hr>
----
-
-### Summary from the timestamp data
-<hr>
-
-- The hierarchical model reveals cohort-specific effects on the net loss rate $\small \lambda$ of naive T cells.
-
-- The major distinction in cohorts is the ** age of the host ** when naive T cells were stamped.</br>
-&#8618; Possible host-age effects in naive T cell maintenance?
 
 --
 
-### Whats Next?
+### Sigmoid form for $\small \lambda(t)$
 
-- Adopt density-dependence model to fit on the timestamp data.
+$$
+\begin{aligned}
+\lambda(t, a) = \, &\lambda_h \, \bigg(1 + \frac{Q}{1 + (t/q1)^5} \bigg) \, e^{-r \, a}\\
+&----  \lambda_0 ----
+\end{aligned}
+$$
 
-- Include host-age dependence in ASM and refit on the ontogeny data.
+---
+<hr>
 
+### Similar statistical support from the data $(\small \Delta$ LooIC $\sim 6)$.
+
+
+```{r echo=FALSE, fig.retina=3, out.width='50%'}
+
+knitr::include_graphics("figures/model_fit_lambdaHA_sigmoid.jpeg")
+```
+
+--
+
+
+```{r echo=FALSE, fig.retina=3, out.width='40%'}
+
+knitr::include_graphics("figures/lambda_varHA_Sigmoid.jpeg")
+```
+
+<hr>
+---
+### Insights into naive T cell homeostasis
+<hr>
+
+- $\lambda = \delta - \rho$ - three different processes: 
+  - Cell division, 
+  - Death and 
+  - Differentiation.
+  
+- $\lambda$ varies with host age
+  - higher in neonates and falls down in adults.
+  
+What it suggests:
+
+- $\rho_\text{neonates}  <  \rho_\text{adults}$  
+  - rules out LIP model.
+  - Also from ki67 data in onotgeny --> $\rho_\text{neonates}  \nless \rho_\text{adults}$  
+  
+- $\delta_\text{neonates}  >  \delta_\text{adults}$  
+  - higher death
+  - higher differentiation into memory. (I would put my money on this).
+  - or both.
+
+---
+
+### Whats next
+<hr>
+
+```{r echo=FALSE, fig.retina=3, out.width='85%'}
+
+knitr::include_graphics("figures/lambda_global.jpg")
+```
 
 ---
 
@@ -238,9 +285,6 @@ knitr::include_graphics("figures/scuba.gif")
 
 </br>
 </br>
-
-The models are coded in `Stan` programming language, are compiled using `CMDSTAN` interface and analysed in R using `Rstan` package.
-
 </br>
 </br>
 

@@ -203,22 +203,17 @@ knitr::include_graphics("figures/cd8_compare3.jpeg")
 
 ---
 
-### Summary from the ontogeny data
+### Equivocal support for age-structured and density-dependence models
 <hr>
 
-- Naive CD4 and CD8 T cells follow distinct dynamics early on in life.</br>
-&#8618; Agrees with the <a href="#naivedynamics-slide"; style="color:blue;">thymic export profile </a> of CD4 and CD8 RTE.
+- Step1. Verify the parameters 
+- Step2. Add more data?
 
-- Equivocal support for age-structured and density-dependence models.
 
 ???
 Density-dependece explains dynamics early on in life?
 ASM explains dynamics post hymic involution?
 Untangling Net growth into division and loss. 
-
---
-
-</br>
 
 ### Whats Next?
 - Measuring Ki67 expression in **RAG-GFP** neonatal mice. </br>

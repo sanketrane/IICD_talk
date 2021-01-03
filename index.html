@@ -4,7 +4,7 @@
     <title>T cells: Ontogeny and Maintenance</title>
     <meta charset="utf-8" />
     <meta name="author" content="Sanket Rane" />
-    <meta name="date" content="2021-01-02" />
+    <meta name="date" content="2021-01-03" />
     <script src="libs/kePrint/kePrint.js"></script>
     <link href="libs/lightable/lightable.css" rel="stylesheet" />
     <link rel="stylesheet" href="My-xaringan-themer.css" type="text/css" />
@@ -17,12 +17,11 @@ class: center, middle, inverse, title-slide
 # T cells: Ontogeny and Maintenance
 ### Sanket Rane
 ### IICD &amp; Dept of Patholgy and Cell Biology
-### 2021-01-02
+### 2021-01-03
 
 ---
 
 class: center, middle
-
 
 
 
@@ -1142,22 +1141,17 @@ class: center
 
 ---
 
-### Summary from the ontogeny data
+### Equivocal support for age-structured and density-dependence models
 &lt;hr&gt;
 
-- Naive CD4 and CD8 T cells follow distinct dynamics early on in life.&lt;/br&gt;
-&amp;#8618; Agrees with the &lt;a href="#naivedynamics-slide"; style="color:blue;"&gt;thymic export profile &lt;/a&gt; of CD4 and CD8 RTE.
+- Step1. Verify the parameters 
+- Step2. Add more data?
 
-- Equivocal support for age-structured and density-dependence models.
 
 ???
 Density-dependece explains dynamics early on in life?
 ASM explains dynamics post hymic involution?
 Untangling Net growth into division and loss. 
-
---
-
-&lt;/br&gt;
 
 ### Whats Next?
 - Measuring Ki67 expression in **RAG-GFP** neonatal mice. &lt;/br&gt;
@@ -1330,47 +1324,88 @@ ASM reduces down to a 2-dimensional PDE.
 &lt;hr&gt;
 
 ---
-class: inverse
+class: inverse, center
 background-image: url("figures/inverse_bg.png")
 
+### Variation in the initial counts
 &lt;hr&gt;
+
+&lt;/br&gt;
 
 &lt;img src="figures/tmstmp_N0.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
 
+--
+
+##  Substantial variation within each cohort 
+
 ---
+
+### Variation in the net loss rate
+&lt;hr&gt;
 
 .pull-left[
 &lt;img src="figures/lambda_var_cohorts.jpeg" width="90%" style="display: block; margin: auto;" /&gt;
 ]
 
+--
 .pull-right[
-&lt;img src="figures/lambda_var_HA.jpeg" width="90%" style="display: block; margin: auto;" /&gt;
+&lt;img src="figures/lambda_varHA.jpeg" width="90%" style="display: block; margin: auto;" /&gt;
 ]
----
-
-.pull-right[
-&lt;img src="figures/mouse_wise_4.jpg" width="100%" style="display: block; margin: auto;" /&gt;
-]
-
-&lt;hr&gt;
----
-
-### Summary from the timestamp data
-&lt;hr&gt;
-
-- The hierarchical model reveals cohort-specific effects on the net loss rate `\(\small \lambda\)` of naive T cells.
-
-- The major distinction in cohorts is the ** age of the host ** when naive T cells were stamped.&lt;/br&gt;
-&amp;#8618; Possible host-age effects in naive T cell maintenance?
 
 --
 
-### Whats Next?
+### Sigmoid form for `\(\small \lambda(t)\)`
 
-- Adopt density-dependence model to fit on the timestamp data.
+$$
+`\begin{aligned}
+\lambda(t, a) = \, &amp;\lambda_h \, \bigg(1 + \frac{Q}{1 + (t/q1)^5} \bigg) \, e^{-r \, a}\\
+&amp;----  \lambda_0 ----
+\end{aligned}`
+$$
 
-- Include host-age dependence in ASM and refit on the ontogeny data.
+---
+&lt;hr&gt;
 
+### Similar statistical support from the data `\((\small \Delta\)` LooIC `\(\sim 6)\)`.
+
+
+&lt;img src="figures/model_fit_lambdaHA_sigmoid.jpeg" width="50%" style="display: block; margin: auto;" /&gt;
+
+--
+
+
+&lt;img src="figures/lambda_varHA_Sigmoid.jpeg" width="40%" style="display: block; margin: auto;" /&gt;
+
+&lt;hr&gt;
+---
+### Insights into naive T cell homeostasis
+&lt;hr&gt;
+
+- `\(\lambda = \delta - \rho\)` - three different processes: 
+  - Cell division, 
+  - Death and 
+  - Differentiation.
+  
+- `\(\lambda\)` varies with host age
+  - higher in neonates and falls down in adults.
+  
+What it suggests:
+
+- `\(\rho_\text{neonates}  &lt;  \rho_\text{adults}\)`  
+  - rules out LIP model.
+  - Also from ki67 data in onotgeny --&gt; `\(\rho_\text{neonates}  \nless \rho_\text{adults}\)`  
+  
+- `\(\delta_\text{neonates}  &gt;  \delta_\text{adults}\)`  
+  - higher death
+  - higher differentiation into memory. (I would put my money on this).
+  - or both.
+
+---
+
+### Whats next
+&lt;hr&gt;
+
+&lt;img src="figures/lambda_global.jpg" width="85%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -1388,9 +1423,6 @@ class: center, middle
 
 &lt;/br&gt;
 &lt;/br&gt;
-
-The models are coded in `Stan` programming language, are compiled using `CMDSTAN` interface and analysed in R using `Rstan` package.
-
 &lt;/br&gt;
 &lt;/br&gt;
 

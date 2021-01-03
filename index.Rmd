@@ -29,7 +29,6 @@ library(knitr)
 
 
 
-
 ```{r xaringan-themer, include=FALSE}
 library(xaringanthemer)
  style_mono_accent(
