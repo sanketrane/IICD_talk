@@ -39,11 +39,17 @@ knitr::include_graphics("figures/ts_strategy1.png")
 knitr::include_graphics("figures/tmstmp_data.jpeg")
 ```
 
+???
+What can we eyeball here?
+1. Looks like new cells in older mice are lost at a lower rate initially (slope of purple data)
+2. Hint that numbers are not decaying exponentially (would be straight lines on log scale),
+which suggests survival changes with cell age
+
 --
 
 </br>
 
-### <u>Need for Hierrarchical modelling:</u>
+### <u>Need for Hierarchical modelling:</u>
 
 - **Pooling information among cohorts** while fitting models.
 
@@ -83,6 +89,14 @@ $\quad \Rightarrow \quad \quad \small  \lambda(a) = \lambda_0 \, e^{-\gamma \, a
 </span>
 
 <hr>
+
+???
+Given that hint of age-dependence that we see in the data,
+we kept things general and used a model
+that can allow for changes in survival or division with cell age 
+This is a simpler version of the previous model that let us
+track both cell age AND Ki67 expression
+Here we have no Ki67 information so we can only model net loss (lambda)
 --
 
 ### <u>Model:</u>
@@ -124,7 +138,7 @@ $\small \lambda_0 \, e^{-\gamma \,a}$.
 </br>
 
 
-```{r echo=FALSE, fig.retina=3}
+```{r echo=FALSE, fig.retina=3, out.width='150%'}
 library(kableExtra)
 model_compare <- function(looiclist){
   deltaloo_list <- looiclist - min(looiclist) # delta loo-ic
@@ -145,7 +159,7 @@ rownames(ts_table1) <- c(paste0("N0: mice and ", '\u03bb', ': cohort'),
                          paste0("N0: cohort and ", '\u03bb', ': mice'),
                          paste0("N0: mice"))
 ts_table1 %>%
-  kable(caption = "Comparison of the ASM hierarchical models") %>%
+  kable(caption = "Table: Comparison of the hierarchical ASM") %>%
   kable_styling(font_size = 15) %>%
   row_spec(which(ts_table1$ΔLooIC == 0), bold = T, color = "navy", background = "skyblue")
 
@@ -154,11 +168,21 @@ ts_table1 %>%
 
 </br>
 
-```{r echo=FALSE, fig.retina=3, out.width='65%'}
+
+```{r echo=FALSE, fig.retina=3, out.width='70%'}
 
 knitr::include_graphics("figures/tmstmp_fit.jpeg")
 ```
 
+
+
+???
+.pull-right[
+```{r echo=FALSE, fig.retina=3}
+
+knitr::include_graphics("figures/mouse_wise_4.jpg")
+```
+]
 <hr>
 
 ---
@@ -177,7 +201,7 @@ knitr::include_graphics("figures/tmstmp_N0.jpeg")
 
 --
 
-##  Substantial variation within each cohort 
+##  **Substantial variation within each cohort**
 
 ---
 
@@ -191,6 +215,7 @@ knitr::include_graphics("figures/lambda_var_cohorts.jpeg")
 ```
 ]
 
+
 --
 .pull-right[
 ```{r echo=FALSE, fig.retina=3, out.width='90%'}
@@ -199,9 +224,23 @@ knitr::include_graphics("figures/lambda_varHA.jpeg")
 ```
 ]
 
+???
+how striking this is - in the first 3-4 weeks of life,  mean residence time of new naive clones is half that in adults 
+
 --
 
-### Sigmoid form for $\small \lambda(t)$
+</br>
+
+ ### &#8594; Get rid of the cohort-level random effects in $\small \lambda$ 
+
+--
+
+ ###  &#8594; Add a function that captures the variation in $\small \lambda$ with host age.
+
+---
+<hr>
+
+### Hill function:
 
 $$
 \begin{aligned}
@@ -210,24 +249,27 @@ $$
 \end{aligned}
 $$
 
----
-<hr>
+### Similar statistical support from the data $(\small \Delta$ LooIC $\approx 6)$.
 
-### Similar statistical support from the data $(\small \Delta$ LooIC $\sim 6)$.
-
-
-```{r echo=FALSE, fig.retina=3, out.width='50%'}
-
-knitr::include_graphics("figures/model_fit_lambdaHA_sigmoid.jpeg")
-```
 
 --
 
+.pull-left[
+```{r echo=FALSE, fig.retina=3}
 
-```{r echo=FALSE, fig.retina=3, out.width='40%'}
+knitr::include_graphics("figures/model_fit_lambdaHA_sigmoid.jpeg")
+```
+]
+
+--
+
+.pull-right[
+```{r echo=FALSE, fig.retina=3, out.width='90%'}
 
 knitr::include_graphics("figures/lambda_varHA_Sigmoid.jpeg")
 ```
+]
+
 
 <hr>
 ---
@@ -255,7 +297,7 @@ What it suggests:
 
 ---
 
-### Whats next
+### What's next?
 <hr>
 
 ```{r echo=FALSE, fig.retina=3, out.width='85%'}
@@ -265,23 +307,44 @@ knitr::include_graphics("figures/lambda_global.jpg")
 
 ---
 
+### Acknowledgements
+<hr>
 
-```{r echo=FALSE, fig.retina=3}
+
+```{r echo=FALSE, fig.retina=3, out.width="75%"}
 
 knitr::include_graphics("figures/trans_atl.png")
 ```
+
+--
+
+</br>
+
+
+.center[
+<h3 style="color:black; font-size:140%;">
+The journey continues...
+</h3>
+
+```{r echo=FALSE, fig.retina=3, out.width="70%"}
+
+knitr::include_graphics("figures/CancerLogo.png")
+```
+
+## A big thanks to **IICD** family!
+]
+
 ---
 
 class: center, middle
 
-# Thanks!
-
 
 ```{r echo=FALSE, fig.retina=3, out.width='50%'}
 
-knitr::include_graphics("figures/scuba.gif")
+knitr::include_graphics("figures/giphy2.gif")
 ```
 
+# Thanks!
 
 </br>
 </br>

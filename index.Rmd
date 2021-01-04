@@ -14,6 +14,7 @@ output:
       highlightLines: true
       countIncrementalSlides: false
       #slideNumberFormat: "%current%"
+      
 ---
 class: center, middle
 
@@ -25,7 +26,6 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE,
 library(tidyverse)
 library(knitr)
 ```
-
 
 
 
@@ -43,11 +43,11 @@ library(xaringanthemer)
 
 
 
+
 ```{r child='intro.Rmd'}
 ```
 
 ---
-
 
 ```{r child='data_ontogeny.Rmd'}
 ```

@@ -11,26 +11,44 @@ background-image: url("figures/inverse_bg.png")
 </figure>
 ]
 
+???
+Today I am going to talk about the population ecology of T cells which are one of the major component of our immune system, how their populations are established and are maintained.
+
+I would like to share an old fable of a wise Indian king who was constantly worried about foreign spies and assassins infiltrating his kingdom. 
+
 --
 
 <figure>
   <img src="figures/golem1.png" style="width:40%">
 </figure>
 
+???
+So he asks his engineers to make a Golem, a brainless machine/monster, that can specifically identify foreign spies and destroy them.
+
 --
 
-- <h3 style="color:#fcba03; font-size:150%"> Specifically identify and destroy 'foreign'. </h3>
+- <h3 style="color:#fcba03; font-size:130%"> Specifically identify and destroy 'foreign'. </h3>
   <p style="color:gray50; font-size:80%"> &#8594; Large army for countless possibilities.</p>
 
+???
+His engineers build a large army of Golems to account for different types of spies and assassins since there were several kingdoms and the King had many enemies.
+--
+
+- <h3 style="color:#fcba03; font-size:130%"> Recognize our own and Remove that pose threat to 'self'.  </h3>
+  <p style="color:gray50; font-size:80%"> &#8594; Positive and Negative selection.</p> 
+
+???
+
+They also trained these golems to recognize their own people and any golem that pose a threat to them was terminated before sending out.
 
 --
 
-- <h3 style="color:#fcba03; font-size:150%"> Recognize our own.  </h3>
-  <p style="color:gray50; font-size:80%"> &#8594; Remove that pose threat to 'self'.</p>
+- <h3 style="color:#fcba03; font-size:130%"> Remember and respond faster next time.</h3>
 
---
 
-- <h3 style="color:#fcba03; font-size:150%"> Remember and respond faster next time.</h3>
+???
+And lastly, once a foreign spy is identified and confirmed as an enemy the golems were designed to remember it to react faster in future. 
+
 
 ---
 class: inverse, center, middle
@@ -59,8 +77,11 @@ knitr::include_graphics("figures/naive_composition.jpg")
 
 </br>
 
-<h2 style="color:#9e423c; font-size:200%">.center[Naive T cells make up a large fraction of these subsets.] </h2>
-
+.center[
+<h2 style="color:#9e423c; font-size:200%">
+Naive T cells make up a large fraction of these subsets.
+</h2>
+]
 
 ???
 
@@ -90,13 +111,7 @@ A broad and long-lasting naive repertoire is crucial to protect against new infe
 </h3>
 
 ???
-Unlike the very popular fictional club of men who like to fight and not talk about it
-the immune system fights anything and everything that pathogenically threatens our bodies,. remembers it and also make a big fuss about it.
-
-and at the center of it all are naive T cells... which carry a unique receptor on their surface -- TCR - that specifically identifies proteins from pathogens or tumors and mount a robust response against it. 
-
 Our bodies carry a vast array of naive T cells with different specificities to fight a wide range of novel and mutating pathogens. 
-
 
 There are two types of T cells ones that express CD4 conventionally knows and Thelper cells and the others express cd8 protein -- cytotoxic/killer T cells.
 
@@ -150,7 +165,7 @@ Therefore the mechanisms that regulate these processes is crucial for understand
 There is some evidence in the field that the dynamics of RTE are different than naive T cells but there is no way to identify theem experimentally yet. So hard to untangle these processes. 
 -->
 ---
-name: naivedynamics-slide
+
 ## Influx into the naive pool
 <hr>
 
@@ -180,6 +195,9 @@ knitr::include_graphics("figures/Daily_influx.png")
 &#8658; Diminished inflow of new specificities.
 </h3>
 
+???
+Thymic involution strongly impacts naive T cell numbers and repertoire diversity.
+
 --
 
 </br>
@@ -187,7 +205,7 @@ knitr::include_graphics("figures/Daily_influx.png")
 
 .center[
 <h3 style="color:#9e423c;">
-Thymic involution strongly impacts naive T cell numbers and repertoire diversity.
+The majority of T cell repertoire is established early on in life (pre-involution).
 </h3>
 ]
 
@@ -210,54 +228,70 @@ The influx of new specificities into the naive pool diminishes significantly aft
 --
 
 <h3>
-&#128161; Is the majority of T cell repertoire established early on in life (pre-involution)?
+* Naive CD4 and CD8 T cell repertoires are
+</h3> 
+
+- augmented by flow of new cells from the thymus <span style="color:#035AA6;"> &#8594; enhances diversity.</span>
+
+--
+  
+- sustained by proliferation (homeostatic self-renewal) <span style="color:#035AA6;"> &#8594;skews diversity</span>
+  
+--
+
+
+- depleted by loss of cells (by death and onward differentiation).
+
+--
+
+<h3 style="color:#9e423c;">
+&#128161;
+Can we quantify all of these processes to understand how the repertoire is established and how it evolves over an individual’s lifespan?
 </h3> 
 
 --
 
-<h3>
-&#128161; What are the dynamics of its establishment?
+<h3 style="color:#9e423c;">
+&#128161;
+Can we explain the quite dramatic loss in naive T cell diversity in the elderly?
 </h3> 
-   - Is there clonal proliferation in periphery $\rightarrow$ forming large clonal families?</br>
-   &#8618; **Skews clone size distribution and lowers diversity.**
-   - Is it all new specificities from the thymus? </br>
-   &#8618; **Enhances diversity.**
+
+???
 
 ---
+
+### Diving more into the details
 <hr>
-<h3>
-&#128161; How are naive T cells maintained after thymic involution?
+
+<h3 style="font-size:140%;">
+* How are naive T cells maintained after thymic involution?
 </h3> 
 
-- **Quorum sensing** to preserve the numbers? </br>
-&#8618; Compensatory increase in cell division or decrease in turnover or both?
+- <span style="font-size:90%;">T cell numbers are maintained stably (with only a slight decline) in old age, despite a substantial drop in influx from the thymus. </span>
+- <span style="font-size:90%;">Is there **quorum sensing** to preserve the numbers? </br>
+  &#8618; Compensatory increase in cell division or decrease in turnover or both?</span>
+
+
+--
+
+<h3 style="font-size:140%;">
+* What are the rules of replacement within naive pool? 
+</h3>
+
+- <span style="font-size:90%;">Is it purely stochastic?</span>
+- <span style="font-size:90%;">Do new immigrants displace pre-existing cells or the relatively older cells have a 'homeostatic advantage'?</span>
 
 --
 
 <h3 style="color:#9e423c;">
-&#8658; Can this explain the collapse in repertoire diversity in old ages?
+Identifying these rules impacts our understanding of diversity maintenance
 </h3>
+&#8594; <strong style="color:#035AA6; font-size:90%;">Is therapeutic restoration of thymic activity beneficial</strong> </br>
 
 --
 
-</br>
+&#8594; <strong style="color:#035AA6; font-size:90%;">Do older and potentially less functional cells preferentially accumulate over time?</strong>
 
-### &#128161; What are the rules of replacement within naive pool? 
-- Is it purely stochastic?
-
---
-
-- Do new immigrants displace pre-existing cells? 
-
-- Homeostatic advantage for relatively older cells?
-
---
-
-<h3 style="color:#9e423c;">
-&#8658; Consequences on how diversity in maintained over lifetime.
-</h3>
-
-<hr>
 
 ---
 
@@ -265,11 +299,11 @@ The influx of new specificities into the naive pool diminishes significantly aft
 <hr>
 
 Most of our understanding of naive T cell homeostasis comes from studies in adult mice.</br>
-&#8618; Relatively little is known about their neonatal dynamics.
+&#8618; Relatively little is known about how these cells are established early in life.
 
 --
 
-### 1. Heterogeneity in naive T cell pool </br>
+### 1. Heterogeneity in the naive T cell pool </br>
 &#8594; We have shown that naive T cells' ability to persist in the circulation increases with their cell-age **(first-in-last-out rule).** 
 - Shown in diverse experimental settings in adult mice.
 .right[
@@ -306,7 +340,7 @@ Also, we haven't tested this theory on naive T cells dynamics in neonates and ar
 ---
 
 ### 2. Quorum sensing in naive T cell pool </br>
-- Naive T cells have shown to undergo rapid division in profoundly lymphopenic conditions (>90% depletion). 
+- Naive T cells have shown to undergo rapid division in profoundly lymphopenic conditions (>90% depletion) &mdhash; Lymphopenia Induced Proliferation (LIP). 
 
 .right[
 <span style="color:#606060; font-weight:900; font-size:90%;"> Bourgeois and Stockinger, JI 2006 </span>
@@ -315,11 +349,10 @@ Also, we haven't tested this theory on naive T cells dynamics in neonates and ar
 &#8618;
 Reduced competition for resources (IL-7 and self-MHC derived tonic signals).
 
-- Does it manifest under normal conditions early in life?
-
 - Is there reduced competition in neonates?
 
---
+- Does LIP manifest under physiological conditions early in life?
+
 
 ???
 - There is an evidence for lymphopenia induced proliferation when naive T cell compartment is deplated > 90%.
@@ -332,9 +365,9 @@ Probably because of reduced competition for cytokine and MHC derived tonic signa
 </br>
 
 ### 3. Dynamics of Recent Thymic Emigrants </br>
-- RTE within naive CD4 T cell pool are short-lived as compared to pre-existing naive T cells.
+- RTE within naive CD4 T cell pool are short-lived as compared to more established, mature naive cells.
 
-- No kinetic heterogeneity within naive CD8 T cell pool.
+- Differences in RTE & mature cells are less pronounced among naive CD8 T cells in adult mice.
 
 .right[
 <span style="color:#606060; font-weight:900; font-size:90%;"> van Hoeven Front. Imm. 2017 </span>
@@ -343,6 +376,7 @@ Probably because of reduced competition for cytokine and MHC derived tonic signa
 ???
 RTE are hard to identify within the naive pool. Analysis of gfp labeling of thymic export and thymic transplants have shown that ...
 
+We lack definitive markers of RTE so these results are not definitive
 <hr>
 
 ---
@@ -363,6 +397,9 @@ background-image: url("figures/inverse_bg.png")
 <h3 style="color:#fcba03; font-size:150%;">
 &#8658; How and why does our immunity wanes with age?
 </h3>
+
+???
+Do changes in the age-structure and diversity of naive T cells explain why our ability to fight new infections wanes with age?
 
 --
 
@@ -493,7 +530,7 @@ Different mechanisms may act in conjunction to regulate naive T cell homeostasis
 
 ---
 
-<h3 style="font-size:140%;">
+<h3 style="font-size:150%;">
 Untangling division and loss:
 </h3> 
 

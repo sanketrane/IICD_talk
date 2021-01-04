@@ -62,6 +62,9 @@ $$
 $$
 ]
 
+???
+notice here we allow rates of loss and/or division to vary with the total pool size N -
+to model any effect of competition or quorum sensing
 --
 
 </br>
@@ -148,8 +151,8 @@ $$
 
 </br>
 
-### Hamiltonian Monte Carlo (H-MC):
-Parameters are sampled from the joint prior distribution $P(\theta)$ to estimate the posterior distribution $P(\hat \theta)$.
+### Sampling the posterior:
+Parameters are sampled from the joint density $P(\theta)$ using **Hamiltonian Monte Carlo** (H-MC) algorithm.
 
   - Models are coded in _Stan_ language and fitted using the **NUTS** sampler.
   - Posterior distributions and model fits are analyzed using _R_ package `rstan`. 
@@ -214,6 +217,9 @@ $$
   - $\small \Delta \text{LooIC} = 0 \Rightarrow$ Best-fit model. 
   - Higher values suggest poorer support from the data.
 
+???
+Only relative values of LooIC are meaningful
+
 --
 
 </br>
@@ -224,7 +230,7 @@ $$
 
 .shadedbox[
 $$
-\omega_i = \frac{exp(-\frac{1}{2} \, [\Delta \text{LooIC}]_i)}{\sum_m^M  \, exp(-\frac{1}{2} \, [\Delta \text{LooIC}]_m)}
+\omega_i = \frac{\exp(-\frac{1}{2} \, [\Delta \text{LooIC}]_i)}{\sum_m^M  \, \exp(-\frac{1}{2} \, [\Delta \text{LooIC}]_m)}
 $$
 ]
 
